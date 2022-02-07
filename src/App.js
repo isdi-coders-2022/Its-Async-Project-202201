@@ -193,30 +193,7 @@ function App() {
           </ul>
         </div>
       </section>
-      <footer>
-        <div className="container">
-          <div className="row d-flex justify-content-center text-center">
-            <img src="#" alt="" />
-            <img src="#" alt="" />
-            <img src="#" alt="" />
-            <img src="#" alt="" />
-            <img src="#" alt="" />
-          </div>
-          <div className="row d-flex justify-content-center text-center">
-            <p>
-              Rick and Morty is created by Justin Roiland and Dan Harmon for
-              Adult Swim. The data and images are used without claim of
-              ownership and belong to their respective owners.
-            </p>
-          </div>
-          <div className="row d-flex justify-content-center text-center">
-            <p>
-              Designed and developed by Matheus Martins, David Soto and Marc
-              Giró
-            </p>
-          </div>
-        </div>
-      </footer>
+
     </>
   );
 }
