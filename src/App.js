@@ -1,3 +1,5 @@
+import Filter from "./components/Filter/Filter";
+
 function App() {
   return (
     <>
@@ -31,6 +33,9 @@ function App() {
             </div>
           </div>
         </nav>
+
+        <Filter></Filter>
+
       </header>
 
       <section className="container">
