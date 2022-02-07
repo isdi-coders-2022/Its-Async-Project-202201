@@ -1,30 +1,155 @@
 function App() {
   return (
     <>
-      <header></header>
+      <header>
+        <nav className="navbar navbar-expand-xl navbar-dark bg-dark">
+          <div className="container">
+            <a className="navbar-brand" href="https://www.google.com/">
+              Rick & Morty App
+            </a>
+            <div className="d-lg-inline-flex" id="navbarNav">
+              <ul className="navbar-nav d-flex flex-row-reverse">
+                <li className="nav-item ms-3 me-3">
+                  <a
+                    className="nav-link active"
+                    aria-current="page"
+                    href="https://www.google.com/"
+                  >
+                    Favorites
+                  </a>
+                </li>
+                <li className="nav-item ms-3 me-3">
+                  <a
+                    className="nav-link active"
+                    aria-current="page"
+                    href="https://www.google.com/"
+                  >
+                    Create
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
 
       <section>
         <h2>CardList</h2>
         <div className="container">
           <div className="row align-items-start">
-            <div className="col">
-              fvkuvuyyu
-              <li>card</li>
-              <li>card</li>
-              <li>card</li>
+            <div className="col d-flex justify-content-around">
+              <li>
+                <div className="card d-flex" style={{ width: "18rem" }}>
+                  <img src="..." className="card-img-top" alt="alternative" />
+                  <div className="card-body">
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                {" "}
+                <div className="card d-flex" style={{ width: "18rem" }}>
+                  <img src="..." className="card-img-top" alt="alternative" />
+                  <div className="card-body">
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                {" "}
+                <div className="card d-flex" style={{ width: "18rem" }}>
+                  <img src="..." className="card-img-top" alt="alternative" />
+                  <div className="card-body">
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+              </li>
             </div>
-            <div className="col">
-              giuybukyuk
-              <li>card</li>
-              <li>card</li>
-              <li>card</li>
+            <div className="col d-flex justify-content-around">
+              <li>
+                {" "}
+                <div className="card d-flex" style={{ width: "18rem" }}>
+                  <img src="..." className="card-img-top" alt="alternative" />
+                  <div className="card-body">
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                {" "}
+                <div className="card d-flex" style={{ width: "18rem" }}>
+                  <img src="..." className="card-img-top" alt="alternative" />
+                  <div className="card-body">
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                {" "}
+                <div className="card d-flex" style={{ width: "18rem" }}>
+                  <img src="..." className="card-img-top" alt="alternative" />
+                  <div className="card-body">
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+              </li>
             </div>
 
-            <div className="col">
-              gyouyvuvy
-              <li>card</li>
-              <li>card</li>
-              <li>card</li>
+            <div className="col d-flex justify-content-around">
+              <li>
+                {" "}
+                <div className="card d-flex" style={{ width: "18rem" }}>
+                  <img src="..." className="card-img-top" alt="alternative" />
+                  <div className="card-body">
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                {" "}
+                <div className="card d-flex" style={{ width: "18rem" }}>
+                  <img src="..." className="card-img-top" alt="alternative" />
+                  <div className="card-body">
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                {" "}
+                <div className="card d-flex" style={{ width: "18rem" }}>
+                  <img src="..." className="card-img-top" alt="alternative" />
+                  <div className="card-body">
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+              </li>
             </div>
           </div>
         </div>
