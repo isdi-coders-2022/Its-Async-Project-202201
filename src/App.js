@@ -1,7 +1,11 @@
+import Filter from "./components/Filter/Filter";
+
 function App() {
   return (
     <>
-      <header></header>
+      <header>
+        <Filter></Filter>
+      </header>
 
       <section>
         <h2>CardList</h2>
