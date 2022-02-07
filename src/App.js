@@ -1,22 +1,7 @@
 function App() {
   return (
     <>
-      <header>
-        <div>
-          <img src="#" alt="" />
-          <a href="#">mainPage</a>
-        </div>
-        <ul>
-          <li>
-            <a href="#">create</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#">favorite</a>
-          </li>
-        </ul>
-      </header>
+      <header></header>
 
       <section>
         <h2>CardList</h2>
