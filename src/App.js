@@ -9,7 +9,7 @@ function App() {
             </a>
             <div className="d-lg-inline-flex" id="navbarNav">
               <ul className="navbar-nav d-flex flex-row-reverse">
-                <li className="nav-item ms-3 me-3">
+                <li className="nav-item ms-2 me-2">
                   <a
                     className="nav-link active"
                     aria-current="page"
@@ -18,7 +18,7 @@ function App() {
                     Favorites
                   </a>
                 </li>
-                <li className="nav-item ms-3 me-3">
+                <li className="nav-item ms-2 me-2">
                   <a
                     className="nav-link active"
                     aria-current="page"
@@ -33,125 +33,159 @@ function App() {
         </nav>
       </header>
 
-      <section>
+      <section className="container">
         <h2>CardList</h2>
-        <div className="container">
-          <div className="row align-items-start">
-            <div className="col d-flex justify-content-around">
-              <li>
-                <div className="card d-flex" style={{ width: "18rem" }}>
-                  <img src="..." className="card-img-top" alt="alternative" />
-                  <div className="card-body">
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                  </div>
+        <div className="row align-items-center">
+          <ul className="col">
+            <li className="d-flex justify-content-center mb-3">
+              <div className="card d-flex" style={{ width: "18rem" }}>
+                <img
+                  src="https://rickandmortyapi.com/api/character/avatar/36.jpeg"
+                  className="card-img-top"
+                  alt="alternative"
+                />
+                <div className="card-body">
+                  <p className="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
                 </div>
-              </li>
-              <li>
-                {" "}
-                <div className="card d-flex" style={{ width: "18rem" }}>
-                  <img src="..." className="card-img-top" alt="alternative" />
-                  <div className="card-body">
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                  </div>
+              </div>
+            </li>
+            <li className="d-flex justify-content-center mb-3">
+              {" "}
+              <div className="card d-flex" style={{ width: "18rem" }}>
+                <img
+                  src="https://rickandmortyapi.com/api/character/avatar/36.jpeg"
+                  className="card-img-top"
+                  alt="alternative"
+                />
+                <div className="card-body">
+                  <p className="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
                 </div>
-              </li>
-              <li>
-                {" "}
-                <div className="card d-flex" style={{ width: "18rem" }}>
-                  <img src="..." className="card-img-top" alt="alternative" />
-                  <div className="card-body">
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                  </div>
+              </div>
+            </li>
+            <li className="d-flex justify-content-center mb-3">
+              {" "}
+              <div className="card d-flex" style={{ width: "18rem" }}>
+                <img
+                  src="https://rickandmortyapi.com/api/character/avatar/36.jpeg"
+                  className="card-img-top"
+                  alt="alternative"
+                />
+                <div className="card-body">
+                  <p className="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
                 </div>
-              </li>
-            </div>
-            <div className="col d-flex justify-content-around">
-              <li>
-                {" "}
-                <div className="card d-flex" style={{ width: "18rem" }}>
-                  <img src="..." className="card-img-top" alt="alternative" />
-                  <div className="card-body">
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                  </div>
+              </div>
+            </li>
+          </ul>
+          <ul className="col">
+            <li className="d-flex justify-content-center mb-3">
+              {" "}
+              <div className="card d-flex" style={{ width: "18rem" }}>
+                <img
+                  src="https://rickandmortyapi.com/api/character/avatar/36.jpeg"
+                  className="card-img-top"
+                  alt="alternative"
+                />
+                <div className="card-body">
+                  <p className="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
                 </div>
-              </li>
-              <li>
-                {" "}
-                <div className="card d-flex" style={{ width: "18rem" }}>
-                  <img src="..." className="card-img-top" alt="alternative" />
-                  <div className="card-body">
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                  </div>
+              </div>
+            </li>
+            <li className="d-flex justify-content-center mb-3">
+              {" "}
+              <div className="card d-flex" style={{ width: "18rem" }}>
+                <img
+                  src="https://rickandmortyapi.com/api/character/avatar/36.jpeg"
+                  className="card-img-top"
+                  alt="alternative"
+                />
+                <div className="card-body">
+                  <p className="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
                 </div>
-              </li>
-              <li>
-                {" "}
-                <div className="card d-flex" style={{ width: "18rem" }}>
-                  <img src="..." className="card-img-top" alt="alternative" />
-                  <div className="card-body">
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                  </div>
+              </div>
+            </li>
+            <li className="d-flex justify-content-center mb-3">
+              {" "}
+              <div className="card d-flex" style={{ width: "18rem" }}>
+                <img
+                  src="https://rickandmortyapi.com/api/character/avatar/36.jpeg"
+                  className="card-img-top"
+                  alt="alternative"
+                />
+                <div className="card-body">
+                  <p className="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
                 </div>
-              </li>
-            </div>
+              </div>
+            </li>
+          </ul>
 
-            <div className="col d-flex justify-content-around">
-              <li>
-                {" "}
-                <div className="card d-flex" style={{ width: "18rem" }}>
-                  <img src="..." className="card-img-top" alt="alternative" />
-                  <div className="card-body">
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                  </div>
+          <ul className="col">
+            <li className="d-flex justify-content-center mb-3">
+              {" "}
+              <div className="card d-flex" style={{ width: "18rem" }}>
+                <img
+                  src="https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+                  className="card-img-top"
+                  alt="alternative"
+                />
+                <div className="card-body">
+                  <p className="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
                 </div>
-              </li>
-              <li>
-                {" "}
-                <div className="card d-flex" style={{ width: "18rem" }}>
-                  <img src="..." className="card-img-top" alt="alternative" />
-                  <div className="card-body">
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                  </div>
+              </div>
+            </li>
+            <li className="d-flex justify-content-center mb-3">
+              {" "}
+              <div className="card d-flex" style={{ width: "18rem" }}>
+                <img
+                  src="https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+                  className="card-img-top"
+                  alt="alternative"
+                />
+                <div className="card-body">
+                  <p className="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
                 </div>
-              </li>
-              <li>
-                {" "}
-                <div className="card d-flex" style={{ width: "18rem" }}>
-                  <img src="..." className="card-img-top" alt="alternative" />
-                  <div className="card-body">
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                  </div>
+              </div>
+            </li>
+            <li className="d-flex justify-content-center mb-3">
+              {" "}
+              <div className="card d-flex" style={{ width: "18rem" }}>
+                <img
+                  src="https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+                  className="card-img-top"
+                  alt="alternative"
+                />
+                <div className="card-body">
+                  <p className="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
                 </div>
-              </li>
-            </div>
-          </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
       <footer>
