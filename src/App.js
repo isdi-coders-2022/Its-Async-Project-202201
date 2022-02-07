@@ -29,24 +29,6 @@ function App() {
           </div>
         </div>
       </section>
-      <footer>
-        <h3>footer</h3>
-        <div className="container">
-          <div className="row d-flex justify-content-center text-center">
-            <img src="#" alt="" />
-            <img src="#" alt="" />
-            <img src="#" alt="" />
-            <img src="#" alt="" />
-            <img src="#" alt="" />
-          </div>
-          <div className="row d-flex justify-content-center text-center">
-            <p>first footer text</p>
-          </div>
-          <div className="row d-flex justify-content-center text-center">
-            <p>second footer text</p>
-          </div>
-        </div>
-      </footer>
     </>
   );
 }
