@@ -2,5 +2,5 @@ projectKey=rickandmorty
 serverUrl=http://localhost:9000
 serverVersion=9.2.3.50713
 dashboardUrl=http://localhost:9000/dashboard?id=rickandmorty
-ceTaskId=AX7V6MgJmjbPugY8W1TY
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AX7V6MgJmjbPugY8W1TY
+ceTaskId=AX7a0V9xxXsWtYYHkf1c
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AX7a0V9xxXsWtYYHkf1c
