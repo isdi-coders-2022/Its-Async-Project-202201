@@ -1,4 +1,3 @@
-
 import CharacterCard from "./components/CharacterCard/CharacterCard";
 import { Navigate, Route, Routes, Link } from "react-router-dom";
 import Filter from "./components/Filter/Filter";
@@ -7,6 +6,7 @@ import EditPage from "./pages/EditPage/EditPage";
 import CreatePage from "./pages/CreatePage/CreatePage";
 import CharacterPage from "./pages/CharacterPage/CharacterPage";
 import NotFound from "./pages/NotFound/NotFound";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -68,6 +68,7 @@ function App() {
           </ul>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
