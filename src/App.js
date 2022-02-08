@@ -2,6 +2,7 @@ import { Navigate, Route, Routes, Link } from "react-router-dom";
 import Filter from "./components/Filter/Filter";
 import FavoritesPage from "./pages/FavoritesPage/FavoritesPage";
 import EditPage from "./pages/EditPage/EditPage";
+import HomePage from "./pages/HomePage/HomePage";
 import CreatePage from "./pages/CreatePage/CreatePage";
 import CharacterPage from "./pages/CharacterPage/CharacterPage";
 import NotFound from "./pages/NotFound/NotFound";
@@ -29,6 +30,7 @@ function App() {
         </nav>
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
           <Route path="/edit/:id" element={<EditPage />} />
           <Route path="/create" element={<CreatePage />} />
