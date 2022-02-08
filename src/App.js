@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import CreatePage from "./pages/CreatePage/CreatePage";
 import CharacterPage from "./pages/CharacterPage/CharacterPage";
 import NotFound from "./pages/NotFound/NotFound";
+import Button from "./components/Button/Button";
 
 function App() {
   return (
@@ -196,6 +197,7 @@ function App() {
           </ul>
         </div>
       </section>
+      <Button />
     </>
   );
 }
