@@ -1,4 +1,3 @@
-
 import CharacterCard from "./components/CharacterCard/CharacterCard";
 import { Navigate, Route, Routes, Link } from "react-router-dom";
 import Filter from "./components/Filter/Filter";
@@ -7,6 +6,7 @@ import EditPage from "./pages/EditPage/EditPage";
 import CreatePage from "./pages/CreatePage/CreatePage";
 import CharacterPage from "./pages/CharacterPage/CharacterPage";
 import NotFound from "./pages/NotFound/NotFound";
+import CardListStyled from "./styles/CardList.styled";
 
 function App() {
   return (
@@ -40,34 +40,34 @@ function App() {
 
         <Filter></Filter>
       </header>
-
-      <section className="container">
-        <h2>CardList</h2>
-        <div className="align-items-center">
-          <ul className="row">
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-          </ul>
-        </div>
-      </section>
+      <CardListStyled>
+        <section className="container">
+          <div className="characterList">
+            <ul>
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+            </ul>
+          </div>
+        </section>
+      </CardListStyled>
     </>
   );
 }

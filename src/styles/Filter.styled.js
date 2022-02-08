@@ -21,8 +21,12 @@ const StyledFilters = styled.nav`
   }
 
   h2 {
-    margin-left: 50px;
+    margin-left: 120px;
     color: #f0eb74;
+  }
+
+  .filterMenu {
+    margin-right: 40px;
   }
 
   @media (max-width: 576px) {
