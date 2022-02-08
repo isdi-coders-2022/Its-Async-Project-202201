@@ -10,9 +10,16 @@ import NotFound from "./pages/NotFound/NotFound";
 import Footer from "./components/Footer/Footer";
 import CardListStyled from "./styles/CardList.styled";
 import Navbar from "./components/Navbar/Navbar";
-
+import Button from "./components/Button/Button";
 
 function App() {
+  const character1 = {
+    name: "Morty",
+    gender: "Male",
+    species: "Human",
+    status: "Alive",
+    url: "https://images-na.ssl-images-amazon.com/images/I/91MteSqsrJL.jpg",
+  };
   return (
     <>
       <header>
@@ -30,37 +37,41 @@ function App() {
         <Filter></Filter>
       </header>
 
-
-        <CardListStyled>
+      <CardListStyled>
         <section className="container">
           <div className="characterList">
             <ul>
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
             </ul>
+          </div>
+        </section>
+        <section className="container pagination justify-content-end">
+          <div className="d-flex mb-3 me-3">
+            <Button />
+            <Button />
           </div>
         </section>
       </CardListStyled>
       <Footer />
-
     </>
   );
 }

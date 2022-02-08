@@ -17,7 +17,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "",
+    "test": "react-scripts test",
+    "test-coverage": "react-scripts test --verbose --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
@@ -40,12 +41,19 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.16.8",
     "husky": "^7.0.0"
   },
   "jest": {
     "collectCoverageFrom": [
-      "src//.js",
-      "!src//.test.js"
+      "src/**/*.js",
+      "!src/index.js",
+      "!src/reportWebVitals.js",
+      "!src/setupTests.js"
+    ],
+    "coverageReporters": [
+      "html",
+      "text"
     ]
   }
 }
