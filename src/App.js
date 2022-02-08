@@ -1,3 +1,4 @@
+import CharacterCard from "./components/CharacterCard/CharacterCard";
 import Filter from "./components/Filter/Filter";
 
 function App() {
@@ -39,148 +40,28 @@ function App() {
 
       <section className="container">
         <h2>CardList</h2>
-        <div className="row align-items-center">
-          <ul className="col">
-            <li className="d-flex justify-content-center mb-3">
-              <div className="card d-flex">
-                <img
-                  src="https://rickandmortyapi.com/api/character/avatar/36.jpeg"
-                  className="card-img-top"
-                  alt="alternative"
-                />
-                <div className="card-body">
-                  <p className="card-text">Evil Morty</p>
-                  <p className="card-text">Human - Male</p>
-                  <p className="card-text">Alive</p>
-                  <a href="..........."> + Info </a>
-                </div>
-              </div>
-            </li>
-            <li className="d-flex justify-content-center mb-3">
-              <div className="card d-flex">
-                <img
-                  src="https://rickandmortyapi.com/api/character/avatar/36.jpeg"
-                  className="card-img-top"
-                  alt="alternative"
-                />
-                <div className="card-body">
-                  <p className="card-text">Evil Morty</p>
-                  <p className="card-text">Human - Male</p>
-                  <p className="card-text">Alive</p>
-                  <a href="..........."> + Info </a>
-                </div>
-              </div>
-            </li>
-            <li className="d-flex justify-content-center mb-3">
-              <div className="card d-flex">
-                <img
-                  src="https://rickandmortyapi.com/api/character/avatar/36.jpeg"
-                  className="card-img-top"
-                  alt="alternative"
-                />
-                <div className="card-body">
-                  <p className="card-text">Evil Morty</p>
-                  <p className="card-text">Human - Male</p>
-                  <p className="card-text">Alive</p>
-                  <a href="..........."> + Info </a>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <ul className="col">
-            <li className="d-flex justify-content-center mb-3">
-              <div className="card d-flex">
-                <img
-                  src="https://rickandmortyapi.com/api/character/avatar/36.jpeg"
-                  className="card-img-top"
-                  alt="alternative"
-                />
-                <div className="card-body">
-                  <p className="card-text">Evil Morty</p>
-                  <p className="card-text">Human - Male</p>
-                  <p className="card-text">Alive</p>
-                  <a href="..........."> + Info </a>
-                </div>
-              </div>
-            </li>
-            <li className="d-flex justify-content-center mb-3">
-              <div className="card d-flex">
-                <img
-                  src="https://rickandmortyapi.com/api/character/avatar/36.jpeg"
-                  className="card-img-top"
-                  alt="alternative"
-                />
-                <div className="card-body">
-                  <p className="card-text">Evil Morty</p>
-                  <p className="card-text">Human - Male</p>
-                  <p className="card-text">Alive</p>
-                  <a href="..........."> + Info </a>
-                </div>
-              </div>
-            </li>
-            <li className="d-flex justify-content-center mb-3">
-              <div className="card d-flex">
-                <img
-                  src="https://rickandmortyapi.com/api/character/avatar/36.jpeg"
-                  className="card-img-top"
-                  alt="alternative"
-                />
-                <div className="card-body">
-                  <p className="card-text">Evil Morty</p>
-                  <p className="card-text">Human - Male</p>
-                  <p className="card-text">Alive</p>
-                  <a href="..........."> + Info </a>
-                </div>
-              </div>
-            </li>
-          </ul>
-
-          <ul className="col">
-            <li className="d-flex justify-content-center mb-3">
-              <div className="card d-flex">
-                <img
-                  src="https://rickandmortyapi.com/api/character/avatar/36.jpeg"
-                  className="card-img-top"
-                  alt="alternative"
-                />
-                <div className="card-body">
-                  <p className="card-text">Evil Morty</p>
-                  <p className="card-text">Human - Male</p>
-                  <p className="card-text">Alive</p>
-                  <a href="..........."> + Info </a>
-                </div>
-              </div>
-            </li>
-            <li className="d-flex justify-content-center mb-3">
-              <div className="card d-flex">
-                <img
-                  src="https://rickandmortyapi.com/api/character/avatar/36.jpeg"
-                  className="card-img-top"
-                  alt="alternative"
-                />
-                <div className="card-body">
-                  <p className="card-text">Evil Morty</p>
-                  <p className="card-text">Human - Male</p>
-                  <p className="card-text">Alive</p>
-                  <a href="..........."> + Info </a>
-                </div>
-              </div>
-            </li>
-            <li className="d-flex justify-content-center mb-3">
-              <div className="card d-flex">
-                <img
-                  src="https://rickandmortyapi.com/api/character/avatar/36.jpeg"
-                  className="card-img-top"
-                  alt="alternative"
-                />
-                <div className="card-body">
-                  <p className="card-text">Evil Morty</p>
-                  <p className="card-text">Human - Male</p>
-                  <p className="card-text">Alive</p>
-                  <a href="..........."> + Info </a>
-                </div>
-              </div>
-            </li>
+        <div className="align-items-center">
+          <ul className="row">
+            <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
           </ul>
         </div>
       </section>
