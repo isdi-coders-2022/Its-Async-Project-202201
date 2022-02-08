@@ -11,8 +11,17 @@ import Footer from "./components/Footer/Footer";
 import CardListStyled from "./styles/CardList.styled";
 import Navbar from "./components/Navbar/Navbar";
 import Button from "./components/Button/Button";
+import useCharacters from "./hooks/useCharacters";
+import { useEffect } from "react";
 
 function App() {
+
+  const { loadCharactersAPI } = useCharacters();
+
+  useEffect(() => {
+    loadCharactersAPI();
+  }, [loadCharactersAPI]);
+
   const character1 = {
     name: "Morty",
     gender: "Male",
@@ -20,6 +29,7 @@ function App() {
     status: "Alive",
     url: "https://images-na.ssl-images-amazon.com/images/I/91MteSqsrJL.jpg",
   };
+
   return (
     <>
       <header>
