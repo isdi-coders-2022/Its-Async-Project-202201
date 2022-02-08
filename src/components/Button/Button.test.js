@@ -6,7 +6,6 @@ describe("Given a button Component", () => {
   describe("When it recives a 'Submit' as text", () => {
     test("Then it should render 'Submit' inside", () => {
       const text = "Submit";
-      debugger;
       render(<Button text={text} />);
       const expectedText = screen.queryByText(text);
       expect(expectedText).toBeInTheDocument();

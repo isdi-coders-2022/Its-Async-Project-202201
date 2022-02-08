@@ -11,7 +11,6 @@ describe("Given a CharacterCard Component", () => {
         status: "Alive",
         url: "https://images-na.ssl-images-amazon.com/images/I/91MteSqsrJL.jpg",
       };
-      debugger;
       render(<CharacterCard character={character1} />);
       const expectedText = screen.queryByText(character1.name);
       expect(expectedText).toBeInTheDocument();
