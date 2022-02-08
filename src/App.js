@@ -31,7 +31,7 @@ function App() {
       </header>
 
 
-       <CardListStyled>
+        <CardListStyled>
         <section className="container">
           <div className="characterList">
             <ul>
