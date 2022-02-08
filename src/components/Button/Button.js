@@ -15,9 +15,9 @@ const Button = ({ text }) => {
       <StyledButton
         type="button"
         className="btn btn-secondary me-md-2"
-        onClick={() => console.log("hello there")}
+        onClick={() => console.log("This is my function")}
       >
-        My button
+        ButtonText
       </StyledButton>
     </>
   );
