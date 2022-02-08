@@ -10,7 +10,7 @@ import NotFound from "./pages/NotFound/NotFound";
 import Footer from "./components/Footer/Footer";
 import CardListStyled from "./styles/CardList.styled";
 import Navbar from "./components/Navbar/Navbar";
-
+import Button from "./components/Button/Button";
 
 function App() {
   return (
@@ -30,8 +30,7 @@ function App() {
         <Filter></Filter>
       </header>
 
-
-        <CardListStyled>
+      <CardListStyled>
         <section className="container">
           <div className="characterList">
             <ul>
@@ -56,6 +55,12 @@ function App() {
               <CharacterCard />
               <CharacterCard />
             </ul>
+          </div>
+        </section>
+        <section className="container pagination justify-content-end">
+          <div className="d-flex mb-3 me-3">
+            <Button />
+            <Button />
           </div>
         </section>
       </CardListStyled>
