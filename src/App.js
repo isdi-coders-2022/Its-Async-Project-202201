@@ -11,8 +11,16 @@ import Footer from "./components/Footer/Footer";
 import CardListStyled from "./styles/CardList.styled";
 import Navbar from "./components/Navbar/Navbar";
 import Button from "./components/Button/Button";
+import useCharacters from "./hooks/useCharacters";
+import { useEffect } from "react";
 
 function App() {
+  const { loadCharactersAPI } = useCharacters();
+
+  useEffect(() => {
+    loadCharactersAPI();
+  }, [loadCharactersAPI]);
+
   return (
     <>
       <header>

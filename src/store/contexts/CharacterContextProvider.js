@@ -6,7 +6,7 @@ const CharacterContextProvider = ({ children }) => {
   const [characters, dispatch] = useReducer(characterReducer, []);
 
   return (
-    <CharacterContext.Provider value={(characters, dispatch)}>
+    <CharacterContext.Provider value={{ characters, dispatch }}>
       {children}
     </CharacterContext.Provider>
   );

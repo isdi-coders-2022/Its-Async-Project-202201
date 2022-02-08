@@ -1,6 +1,6 @@
 import actionsTypes from "./actionTypes";
 
-export const loadCharacters = (character) => ({
+export const loadCharacters = (characters) => ({
   type: actionsTypes.loadCharacters,
-  character,
+  characters,
 });
