@@ -23,6 +23,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
+
           </div>
           <section className="navImg">
             <img src="images\title.png" alt="" />
