@@ -8,7 +8,6 @@ import CreatePage from "./pages/CreatePage/CreatePage";
 import CharacterPage from "./pages/CharacterPage/CharacterPage";
 import NotFound from "./pages/NotFound/NotFound";
 import CardListStyled from "./styles/CardList.styled";
-import Button from "./components/Button/Button";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
@@ -57,7 +56,6 @@ function App() {
           </div>
         </section>
       </CardListStyled>
-
     </>
   );
 }
