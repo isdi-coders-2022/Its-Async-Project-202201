@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import CreatePage from "./pages/CreatePage/CreatePage";
 import CharacterPage from "./pages/CharacterPage/CharacterPage";
 import NotFound from "./pages/NotFound/NotFound";
+import CardListStyled from "./styles/CardList.styled";
 import Button from "./components/Button/Button";
 import Navbar from "./components/Navbar/Navbar";
 
@@ -28,36 +29,35 @@ function App() {
         <Filter></Filter>
       </header>
 
-      <section className="container">
-        <main className="align-items-center">
-          <ul className="row">
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-          </ul>
-        </main>
-        <div className="d-md-flex justify-content-md-end mb-4">
-          <Button />
-          <Button />
-        </div>
-      </section>
+      <CardListStyled>
+        <section className="container">
+          <div className="characterList">
+            <ul>
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+            </ul>
+          </div>
+        </section>
+      </CardListStyled>
+
     </>
   );
 }
