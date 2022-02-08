@@ -9,15 +9,15 @@ const StyledButton = styled.button`
   border-style: none;
 `;
 
-const Button = ({ text }) => {
+const Button = ({ text, actionOnClick }) => {
   return (
     <>
       <StyledButton
         type="button"
-        className="btn btn-secondary btn-sm me-md-2 me-3"
-        onClick={() => ""}
+        className="btn btn-secondary me-md-2 me-3"
+        onClick={actionOnClick}
       >
-        ButtonText
+        {text}
       </StyledButton>
     </>
   );
