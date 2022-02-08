@@ -13,6 +13,13 @@ import Navbar from "./components/Navbar/Navbar";
 import Button from "./components/Button/Button";
 
 function App() {
+  const character1 = {
+    name: "Morty",
+    gender: "Male",
+    species: "Human",
+    status: "Alive",
+    url: "https://images-na.ssl-images-amazon.com/images/I/91MteSqsrJL.jpg",
+  };
   return (
     <>
       <header>
@@ -34,26 +41,26 @@ function App() {
         <section className="container">
           <div className="characterList">
             <ul>
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
-              <CharacterCard />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
+              <CharacterCard character={character1} />
             </ul>
           </div>
         </section>
