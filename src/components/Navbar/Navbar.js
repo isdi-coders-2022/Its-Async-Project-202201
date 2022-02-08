@@ -1,25 +1,34 @@
 import { Link } from "react-router-dom";
+import NavBarStyled from "../../styles/navBar.styled";
 
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-xl navbar-dark bg-dark">
-        <div className="container">
-          <a className="navbar-brand" href="/home">
-            Rick & Morty App
-          </a>
-          <div className="d-lg-inline-flex" id="navbarNav">
-            <ul className="navbar-nav d-flex flex-row-reverse">
-              <li className="nav-item ms-2 me-2">
-                <Link to="/favorites">Favorites</Link>
-              </li>
-              <li className="nav-item ms-2 me-2">
-                <Link to="/create">Create</Link>
-              </li>
-            </ul>
+      <NavBarStyled>
+        <nav>
+          <div className="navBar">
+            <div className="navHome">
+              <img className="icon" src="images\rick.png" alt="" width="40px" />
+              <a className="navbar-brand" href="/home">
+                Rick & Morty App
+              </a>
+            </div>
+            <div className="" id="navPage">
+              <ul className="links">
+                <li>
+                  <Link to="/favorites">Favorites</Link>
+                </li>
+                <li>
+                  <Link to="/create">Create</Link>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
+          <section className="navImg">
+            <img src="images\title.png" alt="" />
+          </section>
+        </nav>
+      </NavBarStyled>
     </>
   );
 };
