@@ -1,9 +1,5 @@
 const CreatePage = () => {
-  return (
-    <>
-      <h1>Create</h1>
-    </>
-  );
+  return <></>;
 };
 
 export default CreatePage;

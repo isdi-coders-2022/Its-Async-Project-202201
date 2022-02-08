@@ -1,8 +1,8 @@
 const CharacterCard = () => {
   return (
     <>
-      <li className="col-12 col-sm-4 d-flex justify-content-center mb-3">
-        <div className="card d-flex">
+      <li className="card">
+        <div className="cardContainer">
           <img
             src="https://rickandmortyapi.com/api/character/avatar/36.jpeg"
             className="card-img-top"
