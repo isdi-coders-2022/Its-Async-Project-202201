@@ -31,33 +31,34 @@ function App() {
       </header>
 
 
-      <section className="container">
-        <h2>CardList</h2>
-        <div className="align-items-center">
-          <ul className="row">
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-            <CharacterCard />
-          </ul>
-        </div>
-      </section>
+       <CardListStyled>
+        <section className="container">
+          <div className="characterList">
+            <ul>
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
+            </ul>
+          </div>
+        </section>
+      </CardListStyled>
       <Footer />
 
     </>
