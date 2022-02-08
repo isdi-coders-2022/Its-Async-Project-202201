@@ -7,8 +7,10 @@ import HomePage from "./pages/HomePage/HomePage";
 import CreatePage from "./pages/CreatePage/CreatePage";
 import CharacterPage from "./pages/CharacterPage/CharacterPage";
 import NotFound from "./pages/NotFound/NotFound";
+import Footer from "./components/Footer/Footer";
 import CardListStyled from "./styles/CardList.styled";
 import Navbar from "./components/Navbar/Navbar";
+
 
 function App() {
   return (
@@ -28,7 +30,8 @@ function App() {
         <Filter></Filter>
       </header>
 
-      <CardListStyled>
+
+        <CardListStyled>
         <section className="container">
           <div className="characterList">
             <ul>
@@ -56,6 +59,8 @@ function App() {
           </div>
         </section>
       </CardListStyled>
+      <Footer />
+
     </>
   );
 }
