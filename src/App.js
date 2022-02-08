@@ -12,7 +12,7 @@ function App() {
       <header>
         <nav className="navbar navbar-expand-xl navbar-dark bg-dark">
           <div className="container">
-            <a className="navbar-brand" href="https://www.google.com/">
+            <a className="navbar-brand" href="/home">
               Rick & Morty App
             </a>
             <div className="d-lg-inline-flex" id="navbarNav">
@@ -194,7 +194,6 @@ function App() {
           </ul>
         </div>
       </section>
-
     </>
   );
 }
