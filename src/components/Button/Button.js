@@ -14,8 +14,8 @@ const Button = ({ text }) => {
     <>
       <StyledButton
         type="button"
-        className="btn btn-secondary me-md-2 me-3"
-        onClick={() => console.log("This is my function")}
+        className="btn btn-secondary btn-sm me-md-2 me-3"
+        onClick={() => ""}
       >
         ButtonText
       </StyledButton>

@@ -11,10 +11,14 @@ const Navbar = () => {
           <div className="d-lg-inline-flex" id="navbarNav">
             <ul className="navbar-nav d-flex flex-row-reverse">
               <li className="nav-item ms-2 me-2">
-                <Link to="/favorites">Favorites</Link>
+                <Link to="/favorites" className="nav-item-link">
+                  Favorites
+                </Link>
               </li>
               <li className="nav-item ms-2 me-2">
-                <Link to="/create">Create</Link>
+                <Link to="/create" className="nav-item-link">
+                  Create
+                </Link>
               </li>
             </ul>
           </div>

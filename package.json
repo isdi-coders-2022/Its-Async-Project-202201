@@ -18,7 +18,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test-coverage": "react-scripts test --verbose --coverage",
+    "test-coverage": "react-scripts test --verbose --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
@@ -46,8 +46,14 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src//.js",
-      "!src//.test.js"
+      "src/**/*.js",
+      "!src/index.js",
+      "!src/reportWebVitals.js",
+      "!src/setupTests.js"
+    ],
+    "coverageReporters": [
+      "html",
+      "text"
     ]
   }
 }
