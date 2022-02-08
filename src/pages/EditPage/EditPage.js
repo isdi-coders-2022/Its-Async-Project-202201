@@ -1,9 +1,5 @@
 const EditPage = () => {
-  return (
-    <>
-      <h1>Edit</h1>
-    </>
-  );
+  return <></>;
 };
 
 export default EditPage;
