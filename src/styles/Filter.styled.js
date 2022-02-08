@@ -45,6 +45,7 @@ const StyledFilters = styled.nav`
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin: 0px;
     }
 
     .filterMenu > .filterButton {
