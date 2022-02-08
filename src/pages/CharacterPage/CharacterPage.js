@@ -1,9 +1,5 @@
 const CharacterPage = () => {
-  return (
-    <>
-      <h1>Characters</h1>
-    </>
-  );
+  return <></>;
 };
 
 export default CharacterPage;
