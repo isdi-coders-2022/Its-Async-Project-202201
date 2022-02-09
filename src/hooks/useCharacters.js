@@ -1,10 +1,8 @@
 import { useCallback, useContext } from "react";
 import {
-
   addCharacter,
   loadCharacters,
   deleteCharacter,
-
 } from "../store/actions/characters/actionsCreators";
 import CharacterContext from "../store/contexts/CharacterContext";
 
@@ -12,7 +10,6 @@ const useCharacters = () => {
   const apiURL = "https://rickandmortyapi.com/api/character/";
   const apiLocalUrl = "https://rick-and-morty-isdi.herokuapp.com/characters";
   const { dispatch } = useContext(CharacterContext);
-
 
   const loadCharactersAPI = useCallback(
     async (page) => {
@@ -26,7 +23,11 @@ const useCharacters = () => {
     [dispatch]
   );
 
-
+  const loadCharactersLocalAPI = useCallback(async () => {
+    const response = await fetch(apiLocalUrl);
+    const myCharacters = await response.json();
+    dispatch(loadCharacters(myCharacters));
+  }, [dispatch]);
 
   const addCharactersAPI = async (character) => {
     const response = await fetch(
@@ -43,7 +44,6 @@ const useCharacters = () => {
     dispatch(addCharacter(newCharacter));
   };
 
-
   const deleteCharacterAPI = async (id) => {
     const response = await fetch(`${apiLocalUrl}${id}`, {
       method: "DELETE",
@@ -54,11 +54,12 @@ const useCharacters = () => {
       throw new Error();
     }
   };
+
   return {
     loadCharactersAPI,
+    loadCharactersLocalAPI,
     addCharactersAPI,
     deleteCharacterAPI,
-
   };
 };
 
