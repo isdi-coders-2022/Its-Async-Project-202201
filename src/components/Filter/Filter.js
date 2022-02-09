@@ -1,19 +1,19 @@
 import StyledFilters from "../../styles/Filter.styled";
 
-const Filter = () => {
+const Filter = ({ text }) => {
   return (
     <>
       <StyledFilters>
-        <h2 className="title">ALL CHARACTERS</h2>
+        <h2 className="title">{text}</h2>
         <div className="filterMenu">
           <button className="filterButton" type="button">
-            Button
+            Gender
           </button>
           <button className="filterButton" type="button">
-            Button
+            Status
           </button>
           <button className="filterButton" type="button">
-            Button
+            Species
           </button>
         </div>
       </StyledFilters>
