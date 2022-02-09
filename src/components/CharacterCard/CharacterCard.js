@@ -8,7 +8,7 @@ const CharacterCard = ({ character }) => {
         <li className="card">
           <div className="cardContainer">
             <img
-              src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+              src={character.image}
               className="card-img-top"
               alt="alternative"
             />
@@ -18,10 +18,8 @@ const CharacterCard = ({ character }) => {
                 {`${character.species} - ${character.gender}`}
               </p>
               <p className="card-text">{character.status}</p>
-              <div className="linksContainer">
-                <a href="..........."> + Info </a>
-                <FavIcon className="favIcon"></FavIcon>
-              </div>
+              <a href="..........."> + Info </a>
+              <FavIcon className="favIcon"></FavIcon>
             </div>
           </div>
         </li>
