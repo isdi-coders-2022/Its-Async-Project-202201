@@ -38,8 +38,8 @@ const HomePage = () => {
         </section>
         <section className="container pagination justify-content-end">
           <div className="d-flex mb-3 me-3">
-            <Button actionOnClick={previousPage} />
-            <Button actionOnClick={nextPage} />
+            <Button actionOnClick={previousPage} text={"Previous"} />
+            <Button actionOnClick={nextPage} text={"Next"} />
           </div>
         </section>
       </CardListStyled>

@@ -11,10 +11,3 @@ section.pagination {
   width: 100vw;
   background-color: #24282f;
 }
-a.nav-item-link {
-  text-decoration: none;
-  color: #fff;
-}
-a.nav-item-link:hover {
-  color: #55cc44;
-}
