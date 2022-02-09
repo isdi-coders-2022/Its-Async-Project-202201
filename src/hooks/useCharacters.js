@@ -13,11 +13,19 @@ const useCharacters = () => {
   const apiLocalUrl = "https://rick-and-morty-isdi.herokuapp.com/characters";
   const { dispatch } = useContext(CharacterContext);
 
-  const loadCharactersAPI = useCallback(async () => {
-    const response = await fetch(apiURL);
-    const characters = await response.json();
-    dispatch(loadCharacters(characters.results));
-  }, [dispatch]);
+
+  const loadCharactersAPI = useCallback(
+    async (page) => {
+      const response = !page
+        ? await fetch(apiURL)
+        : await fetch(`${apiURL}/?page=${page}`);
+
+      const characters = await response.json();
+      dispatch(loadCharacters(characters.results));
+    },
+    [dispatch]
+  );
+
 
 
   const addCharactersAPI = async (character) => {
