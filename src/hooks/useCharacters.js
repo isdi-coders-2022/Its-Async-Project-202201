@@ -11,7 +11,6 @@ const useCharacters = () => {
     const characters = await response.json();
     dispatch(loadCharacters(characters.results));
   }, [dispatch]);
-
   return {
     loadCharactersAPI,
   };
