@@ -6,6 +6,7 @@ const StyledFooter = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 50px;
 
   .image-container {
     position: relative;
