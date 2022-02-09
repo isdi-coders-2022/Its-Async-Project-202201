@@ -8,6 +8,10 @@ const characterReducer = (currentCharacters, action) => {
       newCharacters = [...action.characters.results];
       break;
 
+    case actionsTypes.addCharacter:
+      newCharacters = [...currentCharacters, action.characters];
+      break;
+
     default:
       newCharacters = [...currentCharacters];
   }
