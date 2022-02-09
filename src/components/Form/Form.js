@@ -4,6 +4,7 @@ import Button from "../Button/Button";
 
 const Form = () => {
   const { addCharactersAPI } = useCharacters();
+  const characterId = Date.now();
 
   const blankFields = {
     name: "",
@@ -11,7 +12,7 @@ const Form = () => {
     species: "",
     gender: "",
     image: "",
-    id: 1,
+    id: characterId,
   };
 
   const [formData, setFormData] = useState(blankFields);
@@ -32,79 +33,89 @@ const Form = () => {
 
   return (
     <>
-      <form onSubmit={onFormSubmit} autoComplete="off">
-        <label htmlFor="floatingName" className="form-label">
-          Character Name
-        </label>
-        <div className="form-floating mb-3">
-          <input
-            name="name"
-            type="text"
-            className="form-control"
-            id="floatingName"
-            placeholder="CharacterName"
-            value={formData.name}
-            onChange={changeData}
-          />
-          <label htmlFor="floatingName">Rick Sanchez</label>
-        </div>
+      <section className="container mb-3">
+        <form className="mb-3" onSubmit={onFormSubmit} autoComplete="off">
+          <label htmlFor="floatingName" className="form-label"></label>
+          <div className="form-floating mb-3">
+            <input
+              name="name"
+              type="text"
+              className="form-control"
+              id="floatingName"
+              placeholder="CharacterName"
+              value={formData.name}
+              onChange={changeData}
+            />
+            <label htmlFor="floatingName">Character Name</label>
+          </div>
 
-        <label htmlFor="floatingCharacterStatus" className="form-label">
-          Character Status
-        </label>
-        <input
-          name="status"
-          type="text"
-          className="form-control"
-          id="floatingCharacterStatus"
-          placeholder="CharacterName"
-          value={formData.status}
-          onChange={changeData}
-        />
+          <div className="form-floating mb-3">
+            <label
+              htmlFor="floatingCharacterStatus"
+              className="form-label"
+            ></label>
+            <input
+              name="status"
+              type="text"
+              className="form-control"
+              id="floatingCharacterStatus"
+              placeholder="CharacterName"
+              value={formData.status}
+              onChange={changeData}
+            />
+            <label htmlFor="floatingName">Character Status</label>
+          </div>
 
-        <label htmlFor="floatingCharacterSpecies" className="form-label">
-          Character Species
-        </label>
-        <input
-          name="species"
-          type="text"
-          className="form-control"
-          id="floatingCharacterSpecies"
-          placeholder="CharacterName"
-          value={formData.species}
-          onChange={changeData}
-        />
+          <div className="form-floating mb-3">
+            <label
+              htmlFor="floatingCharacterSpecies"
+              className="form-label"
+            ></label>
+            <input
+              name="species"
+              type="text"
+              className="form-control"
+              id="floatingCharacterSpecies"
+              placeholder="CharacterName"
+              value={formData.species}
+              onChange={changeData}
+            />
+            <label htmlFor="floatingName">Character Species</label>
+          </div>
 
-        <label htmlFor="floatingCharacterGender" className="form-label">
-          Character Gender
-        </label>
-        <input
-          name="gender"
-          type="text"
-          className="form-control"
-          id="floatingCharacterGender"
-          placeholder="CharacterName"
-          value={formData.gender}
-          onChange={changeData}
-        />
+          <div className="form-floating mb-3">
+            <label
+              htmlFor="floatingCharacterGender"
+              className="form-label"
+            ></label>
+            <input
+              name="gender"
+              type="text"
+              className="form-control"
+              id="floatingCharacterGender"
+              placeholder="CharacterName"
+              value={formData.gender}
+              onChange={changeData}
+            />
+            <label htmlFor="floatingName">Character Gender</label>
+          </div>
 
-        <label htmlFor="floatingImage" className="form-label">
-          Character Image
-        </label>
-        <div className="form-floating mb-3">
-          <input
-            name="image"
-            type="url"
-            className="form-control"
-            id="floatingImage"
-            placeholder="ImageUrl"
-            value={formData.image}
-            onChange={changeData}
-          />
-          <label htmlFor="floatingName">URL</label>
-        </div>
-        <Button type="submit" text={"Send"} actionOnClick={onFormSubmit} />
-      </form>
+          <div className="form-floating mb-3">
+            <label htmlFor="floatingImage" className="form-label"></label>
+            <input
+              name="image"
+              type="url"
+              className="form-control"
+              id="floatingImage"
+              placeholder="ImageUrl"
+              value={formData.image}
+              onChange={changeData}
+            />
+            <label htmlFor="floatingName">Image URL</label>
+          </div>
+          <Button type="submit" text={"Send"} actionOnClick={onFormSubmit} />
+        </form>
+      </section>
     </>
   );
 };
