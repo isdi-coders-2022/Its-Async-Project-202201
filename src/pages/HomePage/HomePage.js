@@ -23,6 +23,7 @@ const HomePage = () => {
               {characters.map((character) => (
                 <CharacterCard character={character} key={character.id} />
               ))}
+
             </ul>
           </div>
         </section>

@@ -9,7 +9,6 @@ import NotFound from "./pages/NotFound/NotFound";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 
-
 function App() {
 
   return (
@@ -27,6 +26,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </header>
+
       <Footer />
     </>
   );
