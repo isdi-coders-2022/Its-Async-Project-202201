@@ -5,7 +5,7 @@ const characterReducer = (currentCharacters, action) => {
 
   switch (action.type) {
     case actionsTypes.loadCharacters:
-      newCharacters = [...action.characters.results];
+      newCharacters = [...action.characters];
       break;
 
     case actionsTypes.addCharacter:
