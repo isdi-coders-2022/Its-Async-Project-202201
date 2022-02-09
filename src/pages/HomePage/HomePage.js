@@ -1,15 +1,18 @@
 import CharacterCard from "../../components/CharacterCard/CharacterCard";
 import CardListStyled from "../../styles/CardList.styled";
 import Button from "../../components/Button/Button";
+import { useContext, useEffect } from "react";
+import CharacterContext from "../../store/contexts/CharacterContext";
+import useCharacters from "../../hooks/useCharacters";
 
 const HomePage = () => {
-  const character1 = {
-    name: "Morty",
-    gender: "Male",
-    species: "Human",
-    status: "Alive",
-    url: "https://images-na.ssl-images-amazon.com/images/I/91MteSqsrJL.jpg",
-  };
+  const { loadCharactersAPI } = useCharacters();
+
+  const { characters } = useContext(CharacterContext);
+
+  useEffect(() => {
+    loadCharactersAPI();
+  }, [loadCharactersAPI]);
 
   return (
     <>
@@ -17,26 +20,10 @@ const HomePage = () => {
         <section className="container">
           <div className="characterList">
             <ul>
-              <CharacterCard character={character1} />
-              <CharacterCard character={character1} />
-              <CharacterCard character={character1} />
-              <CharacterCard character={character1} />
-              <CharacterCard character={character1} />
-              <CharacterCard character={character1} />
-              <CharacterCard character={character1} />
-              <CharacterCard character={character1} />
-              <CharacterCard character={character1} />
-              <CharacterCard character={character1} />
-              <CharacterCard character={character1} />
-              <CharacterCard character={character1} />
-              <CharacterCard character={character1} />
-              <CharacterCard character={character1} />
-              <CharacterCard character={character1} />
-              <CharacterCard character={character1} />
-              <CharacterCard character={character1} />
-              <CharacterCard character={character1} />
-              <CharacterCard character={character1} />
-              <CharacterCard character={character1} />
+              {characters.map((character) => (
+                <CharacterCard character={character} key={character.id} />
+              ))}
+
             </ul>
           </div>
         </section>

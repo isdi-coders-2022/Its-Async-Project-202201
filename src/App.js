@@ -8,15 +8,8 @@ import CharacterPage from "./pages/CharacterPage/CharacterPage";
 import NotFound from "./pages/NotFound/NotFound";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
-import useCharacters from "./hooks/useCharacters";
-import { useEffect } from "react";
 
 function App() {
-  const { loadCharactersAPI } = useCharacters();
-
-  useEffect(() => {
-    loadCharactersAPI();
-  }, [loadCharactersAPI]);
 
   return (
     <>
