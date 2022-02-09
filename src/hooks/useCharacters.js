@@ -10,6 +10,7 @@ const useCharacters = () => {
     const response = await fetch(apiURL);
     const characters = await response.json();
     dispatch(loadCharacters(characters.results));
+
   }, [dispatch]);
 
   return {

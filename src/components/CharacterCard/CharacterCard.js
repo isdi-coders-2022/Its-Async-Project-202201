@@ -5,6 +5,7 @@ const CharacterCard = ({ character }) => {
         <div className="cardContainer">
           <img
             src={character.image}
+
             className="card-img-top"
             alt="alternative"
           />

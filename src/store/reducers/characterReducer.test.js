@@ -48,3 +48,4 @@ describe("Given a characterReducer function", () => {
     });
   });
 });
+
