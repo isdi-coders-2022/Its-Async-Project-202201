@@ -5,7 +5,14 @@ export const loadCharacters = (characters) => ({
   characters,
 });
 
+
+export const addCharacter = (character) => ({
+  type: actionsTypes.addCharacter,
+  character,
+  });
+
 export const deleteCharacter = (id) => ({
   type: actionsTypes.deleteCharacter,
   id,
+
 });
