@@ -35,9 +35,6 @@ const useCharacters = () => {
     dispatch(addCharacter(newCharacter));
   };
 
-  return {
-    loadCharactersAPI,
-    addCharactersAPI,
 
   const deleteCharacterAPI = async (id) => {
     const response = await fetch(`${apiLocalUrl}${id}`, {
