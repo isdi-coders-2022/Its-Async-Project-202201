@@ -12,11 +12,13 @@ import CardListStyled from "./styles/CardList.styled";
 import Navbar from "./components/Navbar/Navbar";
 import Button from "./components/Button/Button";
 import useCharacters from "./hooks/useCharacters";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import CharacterContext from "./store/contexts/CharacterContext";
 
 function App() {
-
   const { loadCharactersAPI } = useCharacters();
+
+  // const { characters } = useContext(CharacterContext);
 
   useEffect(() => {
     loadCharactersAPI();

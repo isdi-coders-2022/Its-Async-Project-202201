@@ -8,8 +8,8 @@ const useCharacters = () => {
 
   const loadCharactersAPI = useCallback(async () => {
     const response = await fetch(apiURL);
-    const character = await response.json();
-    dispatch(loadCharacters(character));
+    const characters = await response.json();
+    dispatch(loadCharacters(characters));
   }, [dispatch]);
 
   return {
