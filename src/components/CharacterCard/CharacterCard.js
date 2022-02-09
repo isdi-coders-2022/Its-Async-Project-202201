@@ -4,7 +4,8 @@ const CharacterCard = ({ character }) => {
       <li className="card">
         <div className="cardContainer">
           <img
-            src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+            src={character.image}
+
             className="card-img-top"
             alt="alternative"
           />

@@ -1,5 +1,11 @@
+import Form from "../../components/Form/Form";
+
 const EditPage = () => {
-  return <></>;
+  return (
+    <>
+      <Form></Form>
+    </>
+  );
 };
 
 export default EditPage;
