@@ -1,5 +1,8 @@
 import { useCallback, useContext } from "react";
-import { loadCharacters } from "../store/actions/characters/actionsCreators";
+import {
+  addCharacter,
+  loadCharacters,
+} from "../store/actions/characters/actionsCreators";
 import CharacterContext from "../store/contexts/CharacterContext";
 
 const useCharacters = () => {
@@ -12,8 +15,24 @@ const useCharacters = () => {
     dispatch(loadCharacters(characters));
   }, [dispatch]);
 
+  const addCharactersAPI = async (character) => {
+    const response = await fetch(
+      "https://rick-and-morty-isdi.herokuapp.com/characters/",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(character),
+      }
+    );
+    const newCharacter = await response.json();
+    dispatch(addCharacter(newCharacter));
+  };
+
   return {
     loadCharactersAPI,
+    addCharactersAPI,
   };
 };
 

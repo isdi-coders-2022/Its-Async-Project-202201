@@ -13,6 +13,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Button from "./components/Button/Button";
 import useCharacters from "./hooks/useCharacters";
 import { useEffect } from "react";
+import Form from "./components/Form/Form";
 // import CharacterContext from "./store/contexts/CharacterContext";
 
 function App() {
@@ -84,6 +85,7 @@ function App() {
         </section>
       </CardListStyled>
       <Footer />
+      <Form />
     </>
   );
 }
