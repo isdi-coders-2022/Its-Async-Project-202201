@@ -59,7 +59,9 @@
       "!src/store/contexts/*.js"
     ],
     "coverageReporters": [
+      "json",
       "html",
+      "lcov",
       "text"
     ]
   }
