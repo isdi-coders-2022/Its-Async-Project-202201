@@ -20,10 +20,7 @@ const HomePage = () => {
     setPageNumber(pageNumber - 1);
   };
 
-  console.log(pageNumber);
-
   useEffect(() => {
-    console.log("hola");
     loadCharactersAPI(pageNumber);
   }, [loadCharactersAPI, pageNumber]);
 
