@@ -3,7 +3,11 @@ const CharacterCard = ({ character }) => {
     <>
       <li className="card">
         <div className="cardContainer">
-          <img src={character.url} className="card-img-top" alt="alternative" />
+          <img
+            src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+            className="card-img-top"
+            alt="alternative"
+          />
           <div className="card-body">
             <p className="card-text">{character.name}</p>
             <p className="card-text">
