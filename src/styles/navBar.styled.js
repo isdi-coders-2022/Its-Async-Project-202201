@@ -26,6 +26,7 @@ const NavBarStyled = styled.div`
 
   a {
     color: white;
+    text-decoration: none;
   }
 
   .navImg {
