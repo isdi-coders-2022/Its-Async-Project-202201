@@ -6,12 +6,17 @@ const useCharacters = () => {
   const apiURL = "https://rickandmortyapi.com/api/character/";
   const { dispatch } = useContext(CharacterContext);
 
-  const loadCharactersAPI = useCallback(async () => {
-    const response = await fetch(apiURL);
-    const characters = await response.json();
-    dispatch(loadCharacters(characters.results));
+  const loadCharactersAPI = useCallback(
+    async (page) => {
+      const response = !page
+        ? await fetch(apiURL)
+        : await fetch(`${apiURL}/?page=${page}`);
 
-  }, [dispatch]);
+      const characters = await response.json();
+      dispatch(loadCharacters(characters.results));
+    },
+    [dispatch]
+  );
 
   return {
     loadCharactersAPI,

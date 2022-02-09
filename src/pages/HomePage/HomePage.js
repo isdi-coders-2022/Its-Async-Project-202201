@@ -6,13 +6,26 @@ import CharacterContext from "../../store/contexts/CharacterContext";
 import useCharacters from "../../hooks/useCharacters";
 
 const HomePage = () => {
+  // const [pageNumber] = useContext()
   const { loadCharactersAPI } = useCharacters();
 
-  const { characters } = useContext(CharacterContext);
+  const { characters, setPageNumber, pageNumber } =
+    useContext(CharacterContext);
+
+  const nextPage = () => {
+    setPageNumber(pageNumber + 1);
+  };
+
+  const previousPage = () => {
+    setPageNumber(pageNumber - 1);
+  };
+
+  console.log(pageNumber);
 
   useEffect(() => {
-    loadCharactersAPI();
-  }, [loadCharactersAPI]);
+    console.log("hola");
+    loadCharactersAPI(pageNumber);
+  }, [loadCharactersAPI, pageNumber]);
 
   return (
     <>
@@ -23,14 +36,13 @@ const HomePage = () => {
               {characters.map((character) => (
                 <CharacterCard character={character} key={character.id} />
               ))}
-
             </ul>
           </div>
         </section>
         <section className="container pagination justify-content-end">
           <div className="d-flex mb-3 me-3">
-            <Button />
-            <Button />
+            <Button actionOnClick={previousPage} />
+            <Button actionOnClick={nextPage} />
           </div>
         </section>
       </CardListStyled>
