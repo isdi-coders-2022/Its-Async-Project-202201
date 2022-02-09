@@ -1,12 +1,12 @@
 import { render, screen } from "@testing-library/react";
-import EditIcon from "./EditIcon";
+import FavIcon from "./FavIcon";
 
-describe("Given an Icon component", () => {
+describe("Given a FavIcon component", () => {
   describe("When it's rendered", () => {
     test("Then it should be rendered", () => {
-      render(<EditIcon></EditIcon>);
+      render(<FavIcon></FavIcon>);
 
-      const expectedIcon = screen.getByTitle("EDIT");
+      const expectedIcon = screen.getByTitle("FAV");
 
       expect(expectedIcon).toBeInTheDocument();
     });

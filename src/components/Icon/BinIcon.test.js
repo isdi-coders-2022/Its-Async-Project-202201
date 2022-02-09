@@ -1,12 +1,12 @@
 import { render, screen } from "@testing-library/react";
-import EditIcon from "./EditIcon";
+import BinIcon from "./BinIcon";
 
-describe("Given an Icon component", () => {
+describe("Given an BinIcon component", () => {
   describe("When it's rendered", () => {
     test("Then it should be rendered", () => {
-      render(<EditIcon></EditIcon>);
+      render(<BinIcon></BinIcon>);
 
-      const expectedIcon = screen.getByTitle("EDIT");
+      const expectedIcon = screen.getByTitle("DELETE");
 
       expect(expectedIcon).toBeInTheDocument();
     });
