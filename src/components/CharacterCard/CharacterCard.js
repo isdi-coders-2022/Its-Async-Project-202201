@@ -3,7 +3,11 @@ const CharacterCard = ({ character }) => {
     <>
       <li className="card">
         <div className="cardContainer">
-          <img src={character.url} className="card-img-top" alt="alternative" />
+          <img
+            src={character.image}
+            className="card-img-top"
+            alt="alternative"
+          />
           <div className="card-body">
             <p className="card-text">{character.name}</p>
             <p className="card-text">
