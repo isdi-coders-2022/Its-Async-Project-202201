@@ -52,7 +52,11 @@
       "src/**/*.js",
       "!src/index.js",
       "!src/reportWebVitals.js",
-      "!src/setupTests.js"
+      "!src/setupTests.js",
+      "!src/App.js",
+      "!src/pages/**/*.js",
+      "!src/styles/*.js",
+      "!src/store/contexts/*.js"
     ],
     "coverageReporters": [
       "html",
