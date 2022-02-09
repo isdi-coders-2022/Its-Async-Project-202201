@@ -9,7 +9,8 @@ const useCharacters = () => {
   const loadCharactersAPI = useCallback(async () => {
     const response = await fetch(apiURL);
     const characters = await response.json();
-    dispatch(loadCharacters(characters));
+    dispatch(loadCharacters(characters.results));
+
   }, [dispatch]);
 
   return {
