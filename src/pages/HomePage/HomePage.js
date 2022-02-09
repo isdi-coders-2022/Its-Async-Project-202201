@@ -4,6 +4,7 @@ import Button from "../../components/Button/Button";
 import { useContext, useEffect } from "react";
 import CharacterContext from "../../store/contexts/CharacterContext";
 import useCharacters from "../../hooks/useCharacters";
+import Filter from "../../components/Filter/Filter";
 
 const HomePage = () => {
   const { loadCharactersAPI } = useCharacters();
@@ -25,6 +26,7 @@ const HomePage = () => {
 
   return (
     <>
+      <Filter text={"ALL CHARACTERS"}></Filter>
       <CardListStyled>
         <section className="container">
           <div className="characterList">

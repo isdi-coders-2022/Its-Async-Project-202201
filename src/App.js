@@ -10,12 +10,10 @@ import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
-
   return (
     <>
       <header>
         <Navbar />
-        <Filter></Filter>
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<HomePage />} />
@@ -26,7 +24,6 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </header>
-
       <Footer />
     </>
   );
