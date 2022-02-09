@@ -48,6 +48,7 @@ const useCharacters = () => {
   };
   return {
     loadCharactersAPI,
+    addCharactersAPI,
     deleteCharacterAPI,
 
   };
