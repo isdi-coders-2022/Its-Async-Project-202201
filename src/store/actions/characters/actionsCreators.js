@@ -9,7 +9,7 @@ export const loadCharacters = (characters) => ({
 export const nextPage = (pageNumber) => ({
   type: actionsTypes.nextPage,
   pageNumber,
-
+});
 
 export const addCharacter = (character) => ({
   type: actionsTypes.addCharacter,
