@@ -6,7 +6,6 @@ import CharacterContext from "../../store/contexts/CharacterContext";
 import useCharacters from "../../hooks/useCharacters";
 
 const HomePage = () => {
-  // const [pageNumber] = useContext()
   const { loadCharactersAPI } = useCharacters();
 
   const { characters, setPageNumber, pageNumber } =
