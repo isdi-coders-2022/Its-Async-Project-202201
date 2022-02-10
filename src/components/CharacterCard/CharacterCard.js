@@ -24,14 +24,16 @@ const CharacterCard = ({ character, actionAddFav, deleteCharacter }) => {
 
               <div className="linksContainer">
                 <Link to={`/character/${character.id}`}>More Info</Link>
-                <i
-                  className="favIcon star"
-                  onClick={() => {
-                    actionAddFav(character);
-                  }}
-                >
-                  <FavIcon className="favIcon"></FavIcon>
-                </i>
+                {location.pathname === "/home" && (
+                  <i
+                    className="favIcon star"
+                    onClick={() => {
+                      actionAddFav(character);
+                    }}
+                  >
+                    <FavIcon className="favIcon"></FavIcon>
+                  </i>
+                )}
 
                 {location.pathname === "/favorites" && (
                   <i
