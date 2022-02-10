@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import { nextPage } from "../../store/actions/characters/actionsCreators";
 import CharacterContextProvider from "../../store/contexts/CharacterContextProvider";
 import HomePage from "./HomePage";
 
@@ -34,7 +33,7 @@ describe("Given a HomePage", () => {
 
       expect(items).toHaveLength(5);
     });
-    test("then it should render 20 list items", () => {
+    test("then it should render one list items", () => {
       render(
         <BrowserRouter>
           <CharacterContextProvider>
