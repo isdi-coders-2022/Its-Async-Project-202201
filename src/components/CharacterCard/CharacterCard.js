@@ -34,7 +34,7 @@ const CharacterCard = ({ character, actionAddFav, deleteCharacter }) => {
 
               <div className="linksContainer">
                 <Link to={`/character/${character.id}`}>More Info</Link>
-                 <button
+                  <button
                 className="favIcon"
                 onClick={() => {
                   actionAddFav(character);
