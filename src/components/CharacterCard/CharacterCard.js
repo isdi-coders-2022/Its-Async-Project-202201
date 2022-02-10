@@ -19,8 +19,10 @@ const CharacterCard = ({ character }) => {
                 {`${character.species} - ${character.gender}`}
               </p>
               <p className="card-text">{character.status}</p>
-              <Link to={`/character/${character.id}`}>More Info</Link>
-              <FavIcon className="favIcon"></FavIcon>
+              <div className="linksContainer">
+                <Link to={`/character/${character.id}`}>More Info</Link>
+                <FavIcon className="favIcon"></FavIcon>
+              </div>
             </div>
           </div>
         </li>

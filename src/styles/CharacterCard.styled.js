@@ -8,16 +8,16 @@ const CharacterCardStyled = styled.div`
       background-color: #55cc44;
 
       .favIcon {
-        display: block;
         color: #f0eb74;
         background-color: #24282f;
       }
     }
-  }
-  .linksContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    .linksContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   .favIcon {
