@@ -51,3 +51,17 @@ describe("Given an addCharacter action", () => {
     });
   });
 });
+
+describe("Given an deleteCharacter action", () => {
+  describe("When it receives an id", () => {
+    test("Then it should return an action type deleteCharacter", () => {
+      const id = 1;
+      const expectedAction = {
+        type: "delete-character",
+        id,
+      };
+      const action = deleteCharacter(id);
+      expect(action).toEqual(expectedAction);
+    });
+  });
+});

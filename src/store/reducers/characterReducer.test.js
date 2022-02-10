@@ -45,20 +45,20 @@ describe("Given a characterReducer function", () => {
       expect(newCharacters).toEqual(expectedCharacters);
     });
   });
-  describe("When it receives an array of characters and the action 'deleteCharacters'", () => {
+  describe("When it receives an array of characters and the action 'deleteCharacter'", () => {
     test("Then it should return characters", () => {
       const currentCharacters = [
         {
           id: 1,
           name: "Rick Sanchez",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
         {
           id: 2,
           name: "Morty Smith",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
@@ -68,13 +68,13 @@ describe("Given a characterReducer function", () => {
         {
           id: 1,
           name: "Rick Sanchez",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
       ];
       const action = {
-        type: "delete-characters",
+        type: "delete-character",
         id: 2,
       };
       const characters = characterReducer(currentCharacters, action);
