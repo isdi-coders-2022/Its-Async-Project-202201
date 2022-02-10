@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import CharacterCardStyled from "../../styles/CharacterCard.styled";
 import FavIcon from "../Icon/FavIcon";
 import BinIcon from "../Icon/BinIcon";
 
 const CharacterCard = ({ character, actionAddFav, deleteCharacter }) => {
-
+  const location = useLocation();
   return (
     <>
       <CharacterCardStyled>
@@ -16,40 +16,32 @@ const CharacterCard = ({ character, actionAddFav, deleteCharacter }) => {
               alt="alternative"
             />
             <div className="card-body">
-              <p className="card-text">{character.name}</p>
+              <h3 className="card-text">{character.name}</h3>
               <p className="card-text">
                 {`${character.species} - ${character.gender}`}
               </p>
               <p className="card-text">{character.status}</p>
 
-              <a href="..........."> + Info </a>
-              <button
-                className="favIcon"
-                onClick={() => {
-                  actionAddFav(character);
-                }}
-              >
-                <FavIcon className="favIcon"></FavIcon>
-              </button>
-
               <div className="linksContainer">
                 <Link to={`/character/${character.id}`}>More Info</Link>
-                  <button
-                className="favIcon"
-                onClick={() => {
-                  actionAddFav(character);
-                }}
-              >
-                <FavIcon className="favIcon"></FavIcon>
-              </button>
-                <button
-                  className="favIcon"
-                  onClick={() => deleteCharacter(character.id)}
+                <i
+                  className="favIcon star"
+                  onClick={() => {
+                    actionAddFav(character);
+                  }}
                 >
-                  <BinIcon className="favIcon"></BinIcon>
-                </button>
-              </div>
+                  <FavIcon className="favIcon"></FavIcon>
+                </i>
 
+                {location.pathname === "/favorites" && (
+                  <i
+                    className="favIcon bin"
+                    onClick={() => deleteCharacter(character.id)}
+                  >
+                    <BinIcon className="favIcon"></BinIcon>
+                  </i>
+                )}
+              </div>
             </div>
           </div>
         </li>

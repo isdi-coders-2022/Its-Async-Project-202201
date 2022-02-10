@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import "@fontsource/roboto";
 
 const NavBarStyled = styled.div`
   .navHome {
@@ -27,6 +28,7 @@ const NavBarStyled = styled.div`
   a {
     color: white;
     text-decoration: none;
+    font-family: "Roboto";
   }
 
   .navImg {
