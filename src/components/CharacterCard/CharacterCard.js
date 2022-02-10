@@ -1,7 +1,7 @@
 import CharacterCardStyled from "../../styles/CharacterCard.styled";
 import FavIcon from "../Icon/FavIcon";
 
-const CharacterCard = ({ character }) => {
+const CharacterCard = ({ character, actionAddFav }) => {
   return (
     <>
       <CharacterCardStyled>
@@ -19,7 +19,14 @@ const CharacterCard = ({ character }) => {
               </p>
               <p className="card-text">{character.status}</p>
               <a href="..........."> + Info </a>
-              <FavIcon className="favIcon"></FavIcon>
+              <button
+                className="favIcon"
+                onClick={() => {
+                  actionAddFav(character);
+                }}
+              >
+                <FavIcon className="favIcon"></FavIcon>
+              </button>
             </div>
           </div>
         </li>
