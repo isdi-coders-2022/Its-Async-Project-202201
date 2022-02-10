@@ -8,6 +8,7 @@ import Filter from "../../components/Filter/Filter";
 
 const HomePage = () => {
   const { loadCharactersAPI, addCharactersAPI } = useCharacters();
+
   const addCharacterFav = (character) => {
     addCharactersAPI(character);
   };
