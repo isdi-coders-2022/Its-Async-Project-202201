@@ -5,7 +5,7 @@ import CharacterPage from "./CharacterPage";
 
 describe("Given a CharacterPage", () => {
   describe("When its instancied", () => {
-    test("then it should render a heading CHARACTER DETAILS", () => {
+    test.only("then it should render a heading CHARACTER DETAILS", () => {
       render(
         <BrowserRouter>
           <CharacterContextProvider>

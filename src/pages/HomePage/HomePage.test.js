@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import CharacterContextProvider from "../../store/contexts/CharacterContextProvider";
+import CharacterPage from "../CharacterPage/CharacterPage";
 import HomePage from "./HomePage";
 
 describe("Given a HomePage", () => {

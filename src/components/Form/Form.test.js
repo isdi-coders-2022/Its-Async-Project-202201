@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import CharacterContextProvider from "../../store/contexts/CharacterContextProvider";
 import Form from "./Form";
 
-describe("Given a From component", () => {
+describe("Given a Form component", () => {
   describe("When it's rendered", () => {
     test("Then it should be rendered", () => {
       const text = "Character Name";
