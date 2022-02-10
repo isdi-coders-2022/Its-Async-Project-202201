@@ -1,21 +1,21 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import CharacterContextProvider from "../../store/contexts/CharacterContextProvider";
-import CharacterPage from "./CharacterPage";
+import FavoritesPage from "./FavoritesPage";
 
-describe("Given a CharacterPage", () => {
+describe("Given a FavoritePage", () => {
   describe("When its instancied", () => {
-    test("then it should render a heading CHARACTER DETAILS", () => {
+    test("then it should render a heading MY CHARACTERS", () => {
       render(
         <BrowserRouter>
           <CharacterContextProvider>
-            <CharacterPage />
+            <FavoritesPage />
           </CharacterContextProvider>
         </BrowserRouter>
       );
 
       const expectedElement = screen.getByRole("heading", {
-        name: "CHARACTER DETAILS",
+        name: "MY CHARACTERS",
       });
 
       expect(expectedElement).toBeInTheDocument();
