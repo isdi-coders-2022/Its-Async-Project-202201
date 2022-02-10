@@ -45,7 +45,7 @@ const useCharacters = () => {
   };
 
   const deleteCharacterAPI = async (id) => {
-    const response = await fetch(`${apiLocalUrl}${id}`, {
+    const response = await fetch(`${apiLocalUrl}/${id}`, {
       method: "DELETE",
     });
     if (response.ok) {

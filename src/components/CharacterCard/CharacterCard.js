@@ -1,7 +1,9 @@
 import CharacterCardStyled from "../../styles/CharacterCard.styled";
 import FavIcon from "../Icon/FavIcon";
+import BinIcon from "../Icon/BinIcon";
+import useCharacters from "../../hooks/useCharacters";
 
-const CharacterCard = ({ character }) => {
+const CharacterCard = ({ character, deleteCharacter }) => {
   return (
     <>
       <CharacterCardStyled>
@@ -21,6 +23,12 @@ const CharacterCard = ({ character }) => {
               <div className="linksContainer">
                 <a href="..........."> + Info </a>
                 <FavIcon className="favIcon"></FavIcon>
+                <button
+                  className="favIcon"
+                  onClick={() => deleteCharacter(character.id)}
+                >
+                  <BinIcon className="favIcon"></BinIcon>
+                </button>
               </div>
             </div>
           </div>
