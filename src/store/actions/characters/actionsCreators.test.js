@@ -1,4 +1,4 @@
-import { loadCharacters } from "./actionsCreators";
+import { loadCharacters, favCharacter } from "./actionsCreators";
 
 describe("Given a loadCharacters action", () => {
   describe("When it receives characters", () => {
@@ -16,6 +16,23 @@ describe("Given a loadCharacters action", () => {
       };
 
       const action = loadCharacters(characters);
+
+      expect(action).toEqual(expectedAction);
+    });
+  });
+  describe("When it recives character", () => {
+    test("Then it shoud return an action type favCharacter", () => {
+      const character = {
+        name: "Rick",
+        id: 1,
+      };
+
+      const expectedAction = {
+        type: "fav-character",
+        id: character.id,
+      };
+
+      const action = favCharacter(character.id);
 
       expect(action).toEqual(expectedAction);
     });
