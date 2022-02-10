@@ -33,8 +33,14 @@ const CharacterCardStyled = styled.div`
   .favIcon {
     color: #4d4f56;
     background-color: #24282f;
-    padding: 7px;
     border-radius: 5px;
+    cursor: pointer;
+  }
+  .favIcon.star {
+    padding: 6px;
+  }
+  .favIcon.bin {
+    padding: 6px 11px;
   }
 `;
 

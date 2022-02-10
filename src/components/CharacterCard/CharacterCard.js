@@ -3,7 +3,7 @@ import CharacterCardStyled from "../../styles/CharacterCard.styled";
 import FavIcon from "../Icon/FavIcon";
 import BinIcon from "../Icon/BinIcon";
 
-const CharacterCard = ({ character, actionAddFav, deleteCharacter, page }) => {
+const CharacterCard = ({ character, actionAddFav, deleteCharacter }) => {
   const location = useLocation();
   return (
     <>
@@ -24,17 +24,14 @@ const CharacterCard = ({ character, actionAddFav, deleteCharacter, page }) => {
 
               <div className="linksContainer">
                 <Link to={`/character/${character.id}`}>More Info</Link>
-
-                {location.pathname === "/character/" && (
-                  <i
-                    className="favIcon star"
-                    onClick={() => {
-                      actionAddFav(character);
-                    }}
-                  >
-                    <FavIcon className="favIcon"></FavIcon>
-                  </i>
-                )}
+                <i
+                  className="favIcon star"
+                  onClick={() => {
+                    actionAddFav(character);
+                  }}
+                >
+                  <FavIcon className="favIcon"></FavIcon>
+                </i>
 
                 {location.pathname === "/favorites" && (
                   <i

@@ -24,7 +24,7 @@ const CardListStyled = styled.div`
   .card {
     font-family: "Roboto";
     margin: 40px 0 40px 0;
-    min-height: 460px;
+    min-height: 485px;
     width: 250px;
     color: #fff;
   }

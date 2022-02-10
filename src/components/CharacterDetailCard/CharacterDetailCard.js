@@ -1,7 +1,7 @@
 import CharacterCardStyled from "../../styles/CharacterCard.styled";
 import FavIcon from "../Icon/FavIcon";
 
-const CharacterDetailCard = ({ character }) => {
+const CharacterDetailCard = ({ character, actionAddFav }) => {
   return (
     <>
       <CharacterCardStyled>
@@ -22,7 +22,6 @@ const CharacterDetailCard = ({ character }) => {
               <p className="card-text">{character.origin.name}</p>
               <p className="card-text">Last known location:</p>
               <p className="card-text">{character.location.name}</p>
-              <FavIcon className="favIcon star"></FavIcon>
             </div>
           </div>
         </li>
