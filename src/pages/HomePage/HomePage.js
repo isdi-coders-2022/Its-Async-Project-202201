@@ -26,7 +26,6 @@ const HomePage = () => {
   useEffect(() => {
     loadCharactersAPI(pageNumber);
   }, [loadCharactersAPI, pageNumber]);
-
   return (
     <>
       <Filter text={"ALL CHARACTERS"}></Filter>
