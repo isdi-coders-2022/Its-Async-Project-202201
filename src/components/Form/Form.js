@@ -1,10 +1,12 @@
 import { useState } from "react";
 import useCharacters from "../../hooks/useCharacters";
 import Button from "../Button/Button";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const { addCharactersAPI } = useCharacters();
   const characterId = Date.now();
+  let navigate = useNavigate();
 
   const blankFields = {
     name: "",
@@ -21,6 +23,9 @@ const Form = () => {
     event.preventDefault();
     addCharactersAPI(formData);
     resetForm();
+    setTimeout(() => {
+      navigate(`/favorites/`);
+    }, 1800);
   };
 
   const resetForm = () => {
