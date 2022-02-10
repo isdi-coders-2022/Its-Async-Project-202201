@@ -1,5 +1,6 @@
 import CharacterCard from "./CharacterCard";
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 
 describe("Given a CharacterCard Component", () => {
   describe("When it receives a character", () => {
@@ -11,7 +12,11 @@ describe("Given a CharacterCard Component", () => {
         status: "Alive",
         url: "https://images-na.ssl-images-amazon.com/images/I/91MteSqsrJL.jpg",
       };
-      render(<CharacterCard character={character1} />);
+      render(
+        <BrowserRouter>
+          <CharacterCard character={character1} />
+        </BrowserRouter>
+      );
       const expectedText = screen.queryByText(character1.name);
       expect(expectedText).toBeInTheDocument();
     });

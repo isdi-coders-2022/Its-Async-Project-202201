@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
 import CharacterCardStyled from "../../styles/CharacterCard.styled";
 import FavIcon from "../Icon/FavIcon";
 
-const CharacterCard = ({ character }) => {
+const CharacterDetailCard = ({ character }) => {
   return (
     <>
       <CharacterCardStyled>
@@ -19,10 +18,13 @@ const CharacterCard = ({ character }) => {
                 {`${character.species} - ${character.gender}`}
               </p>
               <p className="card-text">{character.status}</p>
-              <div className="linksContainer">
-                <Link to={`/character/${character.id}`}>More Info</Link>
-                <FavIcon className="favIcon"></FavIcon>
-              </div>
+              <p className="card-text">Origin:</p>
+              <p className="card-text">{character.origin.name}</p>
+              <p className="card-text">First seen in:</p>
+              <p className="card-text">{character.location.name}</p>
+              <p className="card-text">Last known location:</p>
+              <p className="card-text">{character.location.name}</p>
+              <FavIcon className="favIcon"></FavIcon>
             </div>
           </div>
         </li>
@@ -31,4 +33,4 @@ const CharacterCard = ({ character }) => {
   );
 };
 
-export default CharacterCard;
+export default CharacterDetailCard;
