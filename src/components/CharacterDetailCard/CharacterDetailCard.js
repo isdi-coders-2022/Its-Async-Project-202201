@@ -22,7 +22,7 @@ const CharacterDetailCard = ({ character }) => {
               <p className="card-text">{character.origin.name}</p>
               <p className="card-text">Last known location:</p>
               <p className="card-text">{character.location.name}</p>
-              <FavIcon className="favIcon"></FavIcon>
+              <FavIcon className="favIcon star"></FavIcon>
             </div>
           </div>
         </li>
