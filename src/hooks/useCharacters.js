@@ -7,8 +7,8 @@ import {
 import CharacterContext from "../store/contexts/CharacterContext";
 
 const useCharacters = () => {
-  const apiURL = "https://rickandmortyapi.com/api/character/";
-  const apiLocalUrl = "https://rick-and-morty-isdi.herokuapp.com/characters";
+  const apiURL = `${process.env.REACT_APP_URLAPI}`;
+  const apiLocalUrl = `${process.env.REACT_APP_URLAPILOCAL}`;
   const { dispatch } = useContext(CharacterContext);
 
   const loadCharactersAPI = useCallback(
@@ -20,14 +20,14 @@ const useCharacters = () => {
       const characters = await response.json();
       dispatch(loadCharacters(characters.results));
     },
-    [dispatch]
+    [dispatch, apiURL]
   );
 
   const loadCharactersLocalAPI = useCallback(async () => {
     const response = await fetch(apiLocalUrl);
     const myCharacters = await response.json();
     dispatch(loadCharacters(myCharacters));
-  }, [dispatch]);
+  }, [dispatch, apiLocalUrl]);
 
   const loadCharacterDetailsAPI = useCallback(
     async (id) => {
