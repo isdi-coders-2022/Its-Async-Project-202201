@@ -20,8 +20,6 @@ const CharacterDetailCard = ({ character }) => {
               <p className="card-text">{character.status}</p>
               <p className="card-text">Origin:</p>
               <p className="card-text">{character.origin.name}</p>
-              <p className="card-text">First seen in:</p>
-              <p className="card-text">{character.location.name}</p>
               <p className="card-text">Last known location:</p>
               <p className="card-text">{character.location.name}</p>
               <FavIcon className="favIcon"></FavIcon>
