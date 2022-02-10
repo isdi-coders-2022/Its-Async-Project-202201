@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import CharacterCardStyled from "../../styles/CharacterCard.styled";
 import FavIcon from "../Icon/FavIcon";
+import BinIcon from "../Icon/BinIcon";
 
-const CharacterCard = ({ character }) => {
+const CharacterCard = ({ character, deleteCharacter }) => {
   return (
     <>
       <CharacterCardStyled>
@@ -22,6 +23,12 @@ const CharacterCard = ({ character }) => {
               <div className="linksContainer">
                 <Link to={`/character/${character.id}`}>More Info</Link>
                 <FavIcon className="favIcon"></FavIcon>
+                <button
+                  className="favIcon"
+                  onClick={() => deleteCharacter(character.id)}
+                >
+                  <BinIcon className="favIcon"></BinIcon>
+                </button>
               </div>
             </div>
           </div>
