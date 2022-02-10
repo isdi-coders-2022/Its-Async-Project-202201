@@ -20,14 +20,14 @@ const useCharacters = () => {
       const characters = await response.json();
       dispatch(loadCharacters(characters.results));
     },
-    [dispatch]
+    [dispatch, apiURL]
   );
 
   const loadCharactersLocalAPI = useCallback(async () => {
     const response = await fetch(apiLocalUrl);
     const myCharacters = await response.json();
     dispatch(loadCharacters(myCharacters));
-  }, [dispatch]);
+  }, [dispatch, apiLocalUrl]);
 
   const loadCharacterDetailsAPI = useCallback(
     async (id) => {
