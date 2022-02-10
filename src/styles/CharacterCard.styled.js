@@ -18,13 +18,29 @@ const CharacterCardStyled = styled.div`
       justify-content: space-between;
       align-items: center;
     }
+
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   }
 
   .favIcon {
     color: #4d4f56;
     background-color: #24282f;
-    padding: 7px;
     border-radius: 5px;
+    cursor: pointer;
+  }
+  .favIcon.star {
+    padding: 6px;
+  }
+  .favIcon.bin {
+    padding: 6px 11px;
   }
 `;
 

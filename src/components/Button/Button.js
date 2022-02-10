@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import "@fontsource/roboto";
 
 const StyledButton = styled.button`
   height: 40px;
@@ -7,6 +8,7 @@ const StyledButton = styled.button`
   border-radius: 5px;
   width: 120px;
   border-style: none;
+  font-family: "Roboto";
 `;
 
 const Button = ({ text, actionOnClick }) => {

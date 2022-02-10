@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const { addCharactersAPI } = useCharacters();
-  const characterId = Date.now();
+  // const characterId = Date.now();
   let navigate = useNavigate();
 
   const blankFields = {
@@ -14,7 +14,7 @@ const Form = () => {
     species: "",
     gender: "",
     image: "",
-    id: characterId,
+    id: "",
   };
 
   const [formData, setFormData] = useState(blankFields);

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import "@fontsource/roboto";
 
 const StyledFooter = styled.footer`
   background-color: #f0eb74;
@@ -24,8 +25,9 @@ const StyledFooter = styled.footer`
   }
 
   p {
-    font-size: 11px;
     color: #24282f;
+    font-family: "Roboto";
+    font-size: 16px;
   }
 
   img {

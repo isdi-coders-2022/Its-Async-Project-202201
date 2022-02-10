@@ -1,7 +1,6 @@
 import CharacterCardStyled from "../../styles/CharacterCard.styled";
-import FavIcon from "../Icon/FavIcon";
 
-const CharacterDetailCard = ({ character }) => {
+const CharacterDetailCard = ({ character, actionAddFav }) => {
   return (
     <>
       <CharacterCardStyled>
@@ -13,7 +12,7 @@ const CharacterDetailCard = ({ character }) => {
               alt="alternative"
             />
             <div className="card-body">
-              <p className="card-text">{character.name}</p>
+              <h3 className="card-text">{character.name}</h3>
               <p className="card-text">
                 {`${character.species} - ${character.gender}`}
               </p>
@@ -22,7 +21,6 @@ const CharacterDetailCard = ({ character }) => {
               <p className="card-text">{character.origin.name}</p>
               <p className="card-text">Last known location:</p>
               <p className="card-text">{character.location.name}</p>
-              <FavIcon className="favIcon"></FavIcon>
             </div>
           </div>
         </li>

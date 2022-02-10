@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import "@fontsource/roboto";
 
 const StyledFilters = styled.nav`
   background-color: #24282f;
@@ -14,6 +15,7 @@ const StyledFilters = styled.nav`
     width: 170px;
     border-style: none;
     margin-right: 80px;
+    font-family: "Roboto";
 
     &:hover {
       background-color: #55cc44;
