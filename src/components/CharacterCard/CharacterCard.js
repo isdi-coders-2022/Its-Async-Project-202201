@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CharacterCardStyled from "../../styles/CharacterCard.styled";
 import FavIcon from "../Icon/FavIcon";
 
@@ -18,7 +19,7 @@ const CharacterCard = ({ character }) => {
                 {`${character.species} - ${character.gender}`}
               </p>
               <p className="card-text">{character.status}</p>
-              <a href="..........."> + Info </a>
+              <Link to={`/character/${character.id}`}>More Info</Link>
               <FavIcon className="favIcon"></FavIcon>
             </div>
           </div>

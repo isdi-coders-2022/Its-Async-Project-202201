@@ -1,5 +1,5 @@
 import CharacterCardStyled from "../../styles/CharacterCard.styled";
-import BinIcon from "../Icon/BinIcon";
+import FavIcon from "../Icon/FavIcon";
 
 const CharacterDetailCard = ({ character }) => {
   return (
@@ -24,7 +24,7 @@ const CharacterDetailCard = ({ character }) => {
               <p className="card-text">{character.FirstSeen}</p>
               <p className="card-text">Last known location:</p>
               <p className="card-text">{character.LastLocation}</p>
-              <BinIcon className="favIcon"></BinIcon>
+              <FavIcon className="favIcon"></FavIcon>
             </div>
           </div>
         </li>
