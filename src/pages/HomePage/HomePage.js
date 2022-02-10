@@ -8,6 +8,7 @@ import Filter from "../../components/Filter/Filter";
 
 const HomePage = () => {
   const { loadCharactersAPI, addCharactersAPI } = useCharacters();
+
   const addCharacterFav = (character) => {
     addCharactersAPI(character);
   };
@@ -26,7 +27,6 @@ const HomePage = () => {
   useEffect(() => {
     loadCharactersAPI(pageNumber);
   }, [loadCharactersAPI, pageNumber]);
-
   return (
     <>
       <Filter text={"ALL CHARACTERS"}></Filter>
