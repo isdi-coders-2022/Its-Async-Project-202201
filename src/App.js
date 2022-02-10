@@ -17,7 +17,6 @@ function App() {
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
-          <Route path="/edit/:CreatedId" element={<EditPage />} />
           <Route path="/create" element={<CreatePage />} />
           <Route path="/character/:id" element={<CharacterPage />} />
           <Route path="*" element={<NotFound />} />
