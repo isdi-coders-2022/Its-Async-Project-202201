@@ -1,7 +1,6 @@
 import CharacterCardStyled from "../../styles/CharacterCard.styled";
 import FavIcon from "../Icon/FavIcon";
 import BinIcon from "../Icon/BinIcon";
-import useCharacters from "../../hooks/useCharacters";
 
 const CharacterCard = ({ character, deleteCharacter }) => {
   return (
