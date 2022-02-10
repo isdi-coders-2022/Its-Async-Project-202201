@@ -7,7 +7,10 @@ import useCharacters from "../../hooks/useCharacters";
 import Filter from "../../components/Filter/Filter";
 
 const HomePage = () => {
-  const { loadCharactersAPI } = useCharacters();
+  const { loadCharactersAPI, addCharactersAPI } = useCharacters();
+  const addCharacterFav = (character) => {
+    addCharactersAPI(character);
+  };
 
   const { characters, setPageNumber, pageNumber } =
     useContext(CharacterContext);
@@ -32,7 +35,11 @@ const HomePage = () => {
           <div className="characterList">
             <ul>
               {characters.map((character) => (
-                <CharacterCard character={character} key={character.id} />
+                <CharacterCard
+                  character={character}
+                  actionAddFav={addCharacterFav}
+                  key={character.id}
+                />
               ))}
             </ul>
           </div>

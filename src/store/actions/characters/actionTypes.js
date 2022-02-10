@@ -6,6 +6,7 @@ const actionsTypes = {
   addCharacter: "add-character",
 
   deleteCharacter: "delete-character",
+
 };
 
 export default actionsTypes;
