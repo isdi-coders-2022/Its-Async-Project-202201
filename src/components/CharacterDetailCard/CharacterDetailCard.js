@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import CharacterCardStyled from "../../styles/CharacterCard.styled";
 import FavIcon from "../Icon/FavIcon";
 
