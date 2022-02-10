@@ -16,7 +16,7 @@ const CharacterCard = ({ character, actionAddFav, deleteCharacter, page }) => {
               alt="alternative"
             />
             <div className="card-body">
-              <p className="card-text">{character.name}</p>
+              <h3 className="card-text">{character.name}</h3>
               <p className="card-text">
                 {`${character.species} - ${character.gender}`}
               </p>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import "@fontsource/roboto";
 
 const CardListStyled = styled.div`
   background-color: #24282f;
@@ -15,11 +16,17 @@ const CardListStyled = styled.div`
     padding: 0;
   }
 
+  h3.card-text {
+    color: #f0eb74;
+    font-weight: bold;
+  }
+
   .card {
-    margin: 10px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    font-family: "Roboto";
+    margin: 40px 0 40px 0;
+    min-height: 460px;
     width: 250px;
+    color: #fff;
   }
 `;
 
