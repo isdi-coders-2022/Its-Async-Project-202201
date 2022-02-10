@@ -1,5 +1,4 @@
 import CharacterCardStyled from "../../styles/CharacterCard.styled";
-import FavIcon from "../Icon/FavIcon";
 
 const CharacterDetailCard = ({ character, actionAddFav }) => {
   return (
