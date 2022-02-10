@@ -29,6 +29,17 @@ const useCharacters = () => {
     dispatch(loadCharacters(myCharacters));
   }, [dispatch]);
 
+  const loadCharacterDetailsAPI = useCallback(
+    async (id) => {
+      const response = await fetch(
+        `https://rickandmortyapi.com/api/character/${id}`
+      );
+      const detailedCharacter = await response.json();
+      dispatch(loadCharacters([detailedCharacter]));
+    },
+    [dispatch]
+  );
+
   const addCharactersAPI = async (character) => {
     const response = await fetch(
       "https://rick-and-morty-isdi.herokuapp.com/characters/",
@@ -45,7 +56,7 @@ const useCharacters = () => {
   };
 
   const deleteCharacterAPI = async (id) => {
-    const response = await fetch(`${apiLocalUrl}${id}`, {
+    const response = await fetch(`${apiLocalUrl}/${id}`, {
       method: "DELETE",
     });
     if (response.ok) {
@@ -58,6 +69,7 @@ const useCharacters = () => {
   return {
     loadCharactersAPI,
     loadCharactersLocalAPI,
+    loadCharacterDetailsAPI,
     addCharactersAPI,
     deleteCharacterAPI,
   };

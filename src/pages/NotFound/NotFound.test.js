@@ -1,23 +1,24 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import CharacterContextProvider from "../../store/contexts/CharacterContextProvider";
-import Form from "./Form";
+import NotFound from "./NotFound";
 
-describe("Given a From component", () => {
-  describe("When it's rendered", () => {
-    test("Then it should be rendered", () => {
-      const text = "Character Name";
-
+describe("Given a NotFound page", () => {
+  describe("When it is invoked", () => {
+    test("then it should render not found", () => {
       render(
         <BrowserRouter>
           <CharacterContextProvider>
-            <Form></Form>
+            <NotFound />
           </CharacterContextProvider>
         </BrowserRouter>
       );
-      const expectedText = screen.getByText(text);
 
-      expect(expectedText).toBeInTheDocument();
+      const expectedElements = screen.getByRole("heading", {
+        name: "not found",
+      });
+
+      expect(expectedElements).toBeInTheDocument();
     });
   });
 });

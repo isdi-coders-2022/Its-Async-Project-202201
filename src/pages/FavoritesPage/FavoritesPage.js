@@ -8,6 +8,10 @@ import CardListStyled from "../../styles/CardList.styled";
 const FavoritesPage = () => {
   const { characters } = useContext(CharacterContext);
   const { loadCharactersLocalAPI } = useCharacters();
+  const { deleteCharacterAPI } = useCharacters();
+  const deletedCharacter = (id) => {
+    deleteCharacterAPI(id);
+  };
 
   useEffect(() => {
     loadCharactersLocalAPI();
@@ -21,7 +25,11 @@ const FavoritesPage = () => {
           <div className="characterList">
             <ul>
               {characters.map((character) => (
-                <CharacterCard character={character} key={character.id} />
+                <CharacterCard
+                  character={character}
+                  deleteCharacter={deletedCharacter}
+                  key={character.id}
+                />
               ))}
             </ul>
           </div>

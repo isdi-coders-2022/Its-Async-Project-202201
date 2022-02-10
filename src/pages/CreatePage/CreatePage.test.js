@@ -1,23 +1,22 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import CharacterContextProvider from "../../store/contexts/CharacterContextProvider";
-import Form from "./Form";
+import CreatePage from "./CreatePage";
 
-describe("Given a From component", () => {
-  describe("When it's rendered", () => {
-    test("Then it should be rendered", () => {
-      const text = "Character Name";
-
+describe("Given a CreatePage", () => {
+  describe("When it is invoked", () => {
+    test("then it should render 5 inputs", () => {
       render(
         <BrowserRouter>
           <CharacterContextProvider>
-            <Form></Form>
+            <CreatePage />
           </CharacterContextProvider>
         </BrowserRouter>
       );
-      const expectedText = screen.getByText(text);
 
-      expect(expectedText).toBeInTheDocument();
+      const expectedElements = screen.getAllByRole("textbox");
+
+      expect(expectedElements).toHaveLength(5);
     });
   });
 });
