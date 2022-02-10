@@ -8,12 +8,11 @@ const characterReducer = (currentCharacters, action) => {
       newCharacters = [...action.characters];
       break;
 
-
     case actionsTypes.addCharacter:
       newCharacters = [...currentCharacters, action.characters];
       break;
 
-    case actionsTypes.deleteCharacters:
+    case actionsTypes.deleteCharacter:
       newCharacters = currentCharacters.filter(
         (character) => character.id !== action.id
       );
