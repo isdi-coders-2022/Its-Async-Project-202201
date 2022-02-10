@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 import CharacterContextProvider from "../../store/contexts/CharacterContextProvider";
 import Form from "./Form";
 
@@ -8,9 +9,11 @@ describe("Given a From component", () => {
       const text = "Character Name";
 
       render(
-        <CharacterContextProvider>
-          <Form></Form>
-        </CharacterContextProvider>
+        <BrowserRouter>
+          <CharacterContextProvider>
+            <Form></Form>
+          </CharacterContextProvider>
+        </BrowserRouter>
       );
       const expectedText = screen.getByText(text);
 
