@@ -1,21 +1,21 @@
+import { useContext, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import CharacterCard from "../../components/CharacterCard/CharacterCard";
 import CharacterDetailCard from "../../components/CharacterDetailCard/CharacterDetailCard";
 import Filter from "../../components/Filter/Filter";
+import useCharacters from "../../hooks/useCharacters";
+import CharacterContext from "../../store/contexts/CharacterContext";
 import CardListStyled from "../../styles/CardList.styled";
+import CharacterCardStyled from "../../styles/CharacterCard.styled";
 
 const CharacterPage = () => {
-  const character = [
-    {
-      name: "Maximus Rickimus",
-      status: "Dead",
-      species: "Human",
-      gender: "Male",
-      origin: "Earth 147",
-      FirstSeen: "Citadel of Ricks",
-      LastLocation: "Total Rickall",
-      image: "https://rickandmortyapi.com/api/character/avatar/215.jpeg",
-      id: "3144523",
-    },
-  ];
+  const { characters } = useContext(CharacterContext);
+  let { id } = useParams();
+  const { loadCharacterDetailsAPI } = useCharacters();
+
+  useEffect(() => {
+    loadCharacterDetailsAPI(id);
+  }, [id, loadCharacterDetailsAPI]);
 
   return (
     <>
@@ -24,7 +24,7 @@ const CharacterPage = () => {
         <section className="container">
           <div className="characterList">
             <ul>
-              {character.map((character) => (
+              {characters.map((character) => (
                 <CharacterDetailCard character={character} key={character.id} />
               ))}
             </ul>
