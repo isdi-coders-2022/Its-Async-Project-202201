@@ -18,8 +18,10 @@ const CharacterCard = ({ character }) => {
                 {`${character.species} - ${character.gender}`}
               </p>
               <p className="card-text">{character.status}</p>
-              <a href="..........."> + Info </a>
-              <FavIcon className="favIcon"></FavIcon>
+              <div className="linksContainer">
+                <a href="..........."> + Info </a>
+                <FavIcon className="favIcon"></FavIcon>
+              </div>
             </div>
           </div>
         </li>
