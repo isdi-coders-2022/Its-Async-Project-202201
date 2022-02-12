@@ -8,6 +8,15 @@ const characterReducer = (currentCharacters, action) => {
       newCharacters = [...action.characters];
       break;
 
+    case actionsTypes.filterHumans:
+      const newfilteredCharacters = [...action.characters];
+      const filteredHumans = newfilteredCharacters.filter(
+        (character) =>
+          character.species === "Human" && character.status === "Alive"
+      );
+      newCharacters = filteredHumans;
+      break;
+
     case actionsTypes.addCharacter:
       newCharacters = [...currentCharacters, action.characters];
       break;

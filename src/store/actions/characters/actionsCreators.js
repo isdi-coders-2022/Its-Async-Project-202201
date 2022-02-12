@@ -5,6 +5,11 @@ export const loadCharacters = (characters) => ({
   characters,
 });
 
+export const filterHumans = (characters) => ({
+  type: actionsTypes.filterHumans,
+  characters,
+});
+
 export const nextPage = (pageNumber) => ({
   type: actionsTypes.nextPage,
   pageNumber,

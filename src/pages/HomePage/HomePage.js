@@ -7,14 +7,19 @@ import useCharacters from "../../hooks/useCharacters";
 import Filter from "../../components/Filter/Filter";
 
 const HomePage = () => {
-  const { loadCharactersAPI, addCharactersAPI } = useCharacters();
+  const { loadCharactersAPI, addCharactersAPI, loadFilteredCharactersAPI } =
+    useCharacters();
+
+  const { characters, setPageNumber, pageNumber } =
+    useContext(CharacterContext);
+
+  const filterHumans = (characters) => {
+    loadFilteredCharactersAPI(characters);
+  };
 
   const addCharacterFav = (character) => {
     addCharactersAPI(character);
   };
-
-  const { characters, setPageNumber, pageNumber } =
-    useContext(CharacterContext);
 
   const nextPage = () => {
     setPageNumber(pageNumber + 1);
@@ -29,7 +34,7 @@ const HomePage = () => {
   }, [loadCharactersAPI, pageNumber]);
   return (
     <>
-      <Filter text={"ALL CHARACTERS"}></Filter>
+      <Filter text={"ALL CHARACTERS"} actionOnClick={filterHumans}></Filter>
       <CardListStyled>
         <section className="container">
           <div className="characterList">
