@@ -6,6 +6,7 @@ import {
   filterHumans,
   filterAliens,
   filterAlive,
+  editCharacter,
 } from "../store/actions/characters/actionsCreators";
 import CharacterContext from "../store/contexts/CharacterContext";
 
@@ -94,6 +95,17 @@ const useCharacters = () => {
     dispatch(addCharacter(newCharacter));
   };
 
+  const editCharacterAPI = async (id) => {
+    const response = await fetch(`${apiLocalUrl}/${id}`, {
+      method: "PUT",
+    });
+    if (response.ok) {
+      dispatch(editCharacter(id));
+    } else {
+      throw new Error();
+    }
+  };
+
   const deleteCharacterAPI = async (id) => {
     const response = await fetch(`${apiLocalUrl}/${id}`, {
       method: "DELETE",
@@ -113,6 +125,7 @@ const useCharacters = () => {
     loadCharactersLocalAPI,
     loadCharacterDetailsAPI,
     addCharactersAPI,
+    editCharacterAPI,
     deleteCharacterAPI,
   };
 };

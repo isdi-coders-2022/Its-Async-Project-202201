@@ -30,6 +30,11 @@ export const addCharacter = (character) => ({
   character,
 });
 
+export const editCharacter = (id) => ({
+  type: actionsTypes.editCharacter,
+  id,
+});
+
 export const deleteCharacter = (id) => ({
   type: actionsTypes.deleteCharacter,
   id,

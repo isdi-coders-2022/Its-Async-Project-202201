@@ -42,11 +42,14 @@ const characterReducer = (currentCharacters, action) => {
       newCharacters = [...currentCharacters, action.characters];
       break;
 
+    case actionsTypes.editCharacter:
+      newCharacters = [...currentCharacters, action.characters];
+      break;
+
     case actionsTypes.deleteCharacter:
       newCharacters = currentCharacters.filter(
         (character) => character.id !== action.id
       );
-
       break;
 
     case actionsTypes.favCharacter:
