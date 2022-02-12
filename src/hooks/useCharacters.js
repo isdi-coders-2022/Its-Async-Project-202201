@@ -1,4 +1,5 @@
 import { useCallback, useContext } from "react";
+import { useLocation } from "react-router-dom";
 import {
   addCharacter,
   loadCharacters,
@@ -7,6 +8,7 @@ import {
   filterAliens,
   filterAlive,
   favCharacter,
+  editCharacter,
 } from "../store/actions/characters/actionsCreators";
 import CharacterContext from "../store/contexts/CharacterContext";
 
@@ -14,6 +16,7 @@ const useCharacters = () => {
   const apiURL = `${process.env.REACT_APP_URLAPI}`;
   const apiLocalUrl = `${process.env.REACT_APP_URLAPILOCAL}`;
   const { dispatch } = useContext(CharacterContext);
+  const location = useLocation();
 
   const loadCharactersAPI = useCallback(
     async (page) => {
@@ -95,6 +98,7 @@ const useCharacters = () => {
     dispatch(addCharacter(newCharacter));
   };
 
+
   const addCharactersFavAPI = async (character) => {
     const response = await fetch(
       "https://rick-and-morty-isdi.herokuapp.com/characters/",
@@ -108,6 +112,23 @@ const useCharacters = () => {
     );
     const newCharacter = await response.json();
     dispatch(favCharacter(newCharacter));
+
+  const editCharacterAPI = async (id) => {
+    const response = await fetch(
+      `${apiLocalUrl}/${location.pathname.slice(5)}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(id),
+      }
+    );
+    if (response.ok) {
+      dispatch(editCharacter(id));
+    } else {
+      throw new Error();
+    }
   };
 
   const deleteCharacterAPI = async (id) => {
@@ -129,6 +150,7 @@ const useCharacters = () => {
     loadCharactersLocalAPI,
     loadCharacterDetailsAPI,
     addCharactersAPI,
+    editCharacterAPI,
     deleteCharacterAPI,
     addCharactersFavAPI,
   };

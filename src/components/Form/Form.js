@@ -1,44 +1,10 @@
-import { useState } from "react";
-import useCharacters from "../../hooks/useCharacters";
 import Button from "../Button/Button";
-import { useNavigate } from "react-router-dom";
 
-const Form = () => {
-  const { addCharactersAPI } = useCharacters();
-  let navigate = useNavigate();
-
-  const blankFields = {
-    name: "",
-    status: "",
-    species: "",
-    gender: "",
-    image: "",
-    id: "",
-  };
-
-  const [formData, setFormData] = useState(blankFields);
-
-  const onFormSubmit = (event) => {
-    event.preventDefault();
-    addCharactersAPI(formData);
-    resetForm();
-    setTimeout(() => {
-      navigate(`/favorites/`);
-    }, 1800);
-  };
-
-  const resetForm = () => {
-    setFormData(blankFields);
-  };
-
-  const changeData = (event) => {
-    setFormData({ ...formData, [event.target.name]: event.target.value });
-  };
-
+const Form = ({ actionOnSubmit, buttonText, changeData, formData }) => {
   return (
     <>
       <section className="container mb-3">
-        <form className="mb-3" onSubmit={onFormSubmit} autoComplete="off">
+        <form className="mb-3" onSubmit={actionOnSubmit} autoComplete="off">
           <label htmlFor="floatingName" className="form-label"></label>
           <div className="form-floating mb-3">
             <input
@@ -117,7 +83,11 @@ const Form = () => {
             />
             <label htmlFor="floatingName">Image URL</label>
           </div>
-          <Button type="submit" text={"Send"} actionOnClick={onFormSubmit} />
+          <Button
+            type="submit"
+            text={buttonText}
+            actionOnClick={actionOnSubmit}
+          />
         </form>
       </section>
     </>
