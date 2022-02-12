@@ -9,10 +9,10 @@ import Filter from "../../components/Filter/Filter";
 const HomePage = () => {
   const {
     loadCharactersAPI,
-    addCharactersAPI,
     loadFilteredHumansAPI,
     loadFilteredAliensAPI,
     loadFilteredAliveAPI,
+    addCharactersFavAPI,
   } = useCharacters();
 
   const { characters, setPageNumber, pageNumber } =
@@ -31,7 +31,7 @@ const HomePage = () => {
   };
 
   const addCharacterFav = (character) => {
-    addCharactersAPI(character);
+    addCharactersFavAPI(character);
   };
 
   const nextPage = () => {

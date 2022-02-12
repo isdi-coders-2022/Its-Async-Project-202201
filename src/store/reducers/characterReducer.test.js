@@ -139,4 +139,46 @@ describe("Given a characterReducer function", () => {
       expect(allCharacters).toEqual(expectedCharacters);
     });
   });
+  describe("When it receives a character and the action 'favCharacter'", () => {
+    test("Then it should return the character", () => {
+      const currentCharacters = [
+        {
+          id: 1,
+          name: "Rick Sanchez",
+          Status: "Alive",
+          species: "Human",
+          gender: "Male",
+        },
+        {
+          id: 2,
+          name: "Morty Smith",
+          Status: "Alive",
+          species: "Human",
+          gender: "Male",
+        },
+      ];
+      const expectedCharacter = [
+        {
+          id: 1,
+          name: "Rick Sanchez",
+          Status: "Alive",
+          species: "Human",
+          gender: "Male",
+        },
+        {
+          id: 2,
+          name: "Morty Smith",
+          Status: "Alive",
+          species: "Human",
+          gender: "Male",
+        },
+      ];
+      const action = {
+        type: "favCharacter",
+        id: 1,
+      };
+      const favoriteCharacter = characterReducer(currentCharacters, action);
+      expect(favoriteCharacter).toEqual(expectedCharacter);
+    });
+  });
 });

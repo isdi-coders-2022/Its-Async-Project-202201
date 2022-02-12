@@ -51,12 +51,6 @@ const characterReducer = (currentCharacters, action) => {
 
     case actionsTypes.favCharacter:
       newCharacters = currentCharacters.map((character) => {
-        if (character.id === action.id) {
-          return {
-            ...character,
-            favorite: !character.favorite,
-          };
-        }
         return { ...character };
       });
       break;
