@@ -10,7 +10,6 @@ const HomePage = () => {
   const {
     loadCharactersAPI,
     addCharactersAPI,
-    editCharacterAPI,
     loadFilteredHumansAPI,
     loadFilteredAliensAPI,
     loadFilteredAliveAPI,
@@ -41,10 +40,6 @@ const HomePage = () => {
 
   const previousPage = () => {
     setPageNumber(pageNumber - 1);
-  };
-
-  const editCharacter = (id) => {
-    editCharacterAPI(id);
   };
 
   useEffect(() => {

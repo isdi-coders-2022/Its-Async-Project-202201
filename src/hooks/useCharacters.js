@@ -96,8 +96,12 @@ const useCharacters = () => {
   };
 
   const editCharacterAPI = async (id) => {
-    const response = await fetch(`${apiLocalUrl}/${id}`, {
+    const response = await fetch(`${apiLocalUrl}/g60hUMw`, {
       method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(id),
     });
     if (response.ok) {
       dispatch(editCharacter(id));

@@ -11,7 +11,12 @@ describe("Given a From component", () => {
       render(
         <BrowserRouter>
           <CharacterContextProvider>
-            <Form></Form>
+            <Form
+              buttonText="Create"
+              actionOnSubmit={() => console.log("Submited")}
+              changeData={""}
+              formData={""}
+            ></Form>
           </CharacterContextProvider>
         </BrowserRouter>
       );
