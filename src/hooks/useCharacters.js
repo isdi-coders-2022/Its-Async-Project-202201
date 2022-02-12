@@ -5,6 +5,7 @@ import {
   deleteCharacter,
   filterHumans,
   filterAliens,
+  filterAlive,
 } from "../store/actions/characters/actionsCreators";
 import CharacterContext from "../store/contexts/CharacterContext";
 
@@ -45,6 +46,18 @@ const useCharacters = () => {
 
       const characters = await response.json();
       dispatch(filterAliens(characters.results));
+    },
+    [dispatch, apiURL]
+  );
+
+  const loadFilteredAliveAPI = useCallback(
+    async (page) => {
+      const response = !page
+        ? await fetch(apiURL)
+        : await fetch(`${apiURL}/?page=${page}`);
+
+      const characters = await response.json();
+      dispatch(filterAlive(characters.results));
     },
     [dispatch, apiURL]
   );
@@ -96,6 +109,7 @@ const useCharacters = () => {
     loadCharactersAPI,
     loadFilteredHumansAPI,
     loadFilteredAliensAPI,
+    loadFilteredAliveAPI,
     loadCharactersLocalAPI,
     loadCharacterDetailsAPI,
     addCharactersAPI,

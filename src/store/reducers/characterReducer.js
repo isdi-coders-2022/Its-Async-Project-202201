@@ -27,6 +27,17 @@ const characterReducer = (currentCharacters, action) => {
       newCharacters = filteredAliens;
       break;
 
+    case actionsTypes.filterAlive:
+      const newfilteredLiveCharacters = [
+        ...currentCharacters,
+        action.characters,
+      ];
+      const filteredAlives = newfilteredLiveCharacters.filter(
+        (character) => character.status === "Alive"
+      );
+      newCharacters = filteredAlives;
+      break;
+
     case actionsTypes.addCharacter:
       newCharacters = [...currentCharacters, action.characters];
       break;

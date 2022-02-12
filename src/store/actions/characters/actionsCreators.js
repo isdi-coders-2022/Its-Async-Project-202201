@@ -15,6 +15,11 @@ export const filterAliens = (characters) => ({
   characters,
 });
 
+export const filterAlive = (characters) => ({
+  type: actionsTypes.filterAlive,
+  characters,
+});
+
 export const nextPage = (pageNumber) => ({
   type: actionsTypes.nextPage,
   pageNumber,

@@ -5,6 +5,8 @@ const actionsTypes = {
 
   filterAliens: "filter-aliens",
 
+  filterAlive: "filter-alive",
+
   nextPage: "next-page",
 
   addCharacter: "add-character",

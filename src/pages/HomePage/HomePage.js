@@ -12,6 +12,7 @@ const HomePage = () => {
     addCharactersAPI,
     loadFilteredHumansAPI,
     loadFilteredAliensAPI,
+    loadFilteredAliveAPI,
   } = useCharacters();
 
   const { characters, setPageNumber, pageNumber } =
@@ -23,6 +24,10 @@ const HomePage = () => {
 
   const filterAliens = (characters) => {
     loadFilteredAliensAPI(characters);
+  };
+
+  const filterAlive = (characters) => {
+    loadFilteredAliveAPI(characters);
   };
 
   const addCharacterFav = (character) => {
@@ -46,6 +51,7 @@ const HomePage = () => {
         text={"ALL CHARACTERS"}
         actionFilterHumans={filterHumans}
         actionFilterAliens={filterAliens}
+        actionFilterAlive={filterAlive}
       ></Filter>
       <CardListStyled>
         <section className="container">
