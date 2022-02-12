@@ -45,4 +45,61 @@ describe("Given a characterReducer function", () => {
       expect(newCharacters).toEqual(expectedCharacters);
     });
   });
+  describe("When it receives a character and the action 'addCharacter'", () => {
+    test("Then it should return all the characters", () => {
+      const currentCharacters = [
+        {
+          id: 1,
+          name: "Rick Sanchez",
+          Status: "Alive",
+          species: "Human",
+          gender: "Male",
+        },
+        {
+          id: 2,
+          name: "Morty Smith",
+          Status: "Alive",
+          species: "Human",
+          gender: "Male",
+        },
+      ];
+
+      const expectedCharacters = [
+        {
+          id: 1,
+          name: "Rick Sanchez",
+          Status: "Alive",
+          species: "Human",
+          gender: "Male",
+        },
+        {
+          id: 2,
+          name: "Morty Smith",
+          Status: "Alive",
+          species: "Human",
+          gender: "Male",
+        },
+        {
+          id: 3,
+          name: "Matheus",
+          Status: "Alive",
+          species: "Human",
+          gender: "Male",
+        },
+      ];
+
+      const action = {
+        type: "add-character",
+        characters: {
+          id: 3,
+          name: "Matheus",
+          Status: "Alive",
+          species: "Human",
+          gender: "Male",
+        },
+      };
+      const allCharacters = characterReducer(currentCharacters, action);
+      expect(allCharacters).toEqual(expectedCharacters);
+    });
+  });
 });
