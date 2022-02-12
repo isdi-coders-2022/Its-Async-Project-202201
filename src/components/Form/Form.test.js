@@ -13,7 +13,7 @@ describe("Given a From component", () => {
           <CharacterContextProvider>
             <Form
               buttonText="Create"
-              actionOnSubmit={() => console.log("Submited")}
+              actionOnSubmit={() => "Submited"}
               changeData={""}
               formData={""}
             ></Form>

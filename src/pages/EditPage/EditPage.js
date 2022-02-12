@@ -15,6 +15,7 @@ const EditPage = () => {
     gender: "",
     image: "",
     id: "",
+    created: true,
   };
 
   const [formData, setFormData] = useState(blankFields);

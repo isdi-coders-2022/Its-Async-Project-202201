@@ -1,4 +1,5 @@
 import { useCallback, useContext } from "react";
+import { useLocation } from "react-router-dom";
 import {
   addCharacter,
   loadCharacters,
@@ -14,6 +15,7 @@ const useCharacters = () => {
   const apiURL = `${process.env.REACT_APP_URLAPI}`;
   const apiLocalUrl = `${process.env.REACT_APP_URLAPILOCAL}`;
   const { dispatch } = useContext(CharacterContext);
+  const location = useLocation();
 
   const loadCharactersAPI = useCallback(
     async (page) => {
@@ -96,13 +98,16 @@ const useCharacters = () => {
   };
 
   const editCharacterAPI = async (id) => {
-    const response = await fetch(`${apiLocalUrl}/g60hUMw`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(id),
-    });
+    const response = await fetch(
+      `${apiLocalUrl}/${location.pathname.slice(5)}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(id),
+      }
+    );
     if (response.ok) {
       dispatch(editCharacter(id));
     } else {
