@@ -8,6 +8,36 @@ const characterReducer = (currentCharacters, action) => {
       newCharacters = [...action.characters];
       break;
 
+    case actionsTypes.filterHumans:
+      const newfilteredCharacters = [...currentCharacters, action.characters];
+      const filteredHumans = newfilteredCharacters.filter(
+        (character) => character.species === "Human"
+      );
+      newCharacters = filteredHumans;
+      break;
+
+    case actionsTypes.filterAliens:
+      const newfilteredAlienCharacters = [
+        ...currentCharacters,
+        action.characters,
+      ];
+      const filteredAliens = newfilteredAlienCharacters.filter(
+        (character) => character.species === "Alien"
+      );
+      newCharacters = filteredAliens;
+      break;
+
+    case actionsTypes.filterAlive:
+      const newfilteredLiveCharacters = [
+        ...currentCharacters,
+        action.characters,
+      ];
+      const filteredAlives = newfilteredLiveCharacters.filter(
+        (character) => character.status === "Alive"
+      );
+      newCharacters = filteredAlives;
+      break;
+
     case actionsTypes.addCharacter:
       newCharacters = [...currentCharacters, action.characters];
       break;

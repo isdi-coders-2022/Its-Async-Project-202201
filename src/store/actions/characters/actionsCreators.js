@@ -5,6 +5,21 @@ export const loadCharacters = (characters) => ({
   characters,
 });
 
+export const filterHumans = (characters) => ({
+  type: actionsTypes.filterHumans,
+  characters,
+});
+
+export const filterAliens = (characters) => ({
+  type: actionsTypes.filterAliens,
+  characters,
+});
+
+export const filterAlive = (characters) => ({
+  type: actionsTypes.filterAlive,
+  characters,
+});
+
 export const nextPage = (pageNumber) => ({
   type: actionsTypes.nextPage,
   pageNumber,
