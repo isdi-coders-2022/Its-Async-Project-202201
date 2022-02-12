@@ -11,6 +11,8 @@ const actionsTypes = {
 
   addCharacter: "add-character",
 
+  editCharacter: "edit-character",
+
   deleteCharacter: "delete-character",
 
   favCharacter: "fav-character",

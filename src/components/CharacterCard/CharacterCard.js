@@ -1,10 +1,18 @@
-import { Link, useLocation } from "react-router-dom";
 import CharacterCardStyled from "../../styles/CharacterCard.styled";
+import { Link, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import FavIcon from "../Icon/FavIcon";
 import BinIcon from "../Icon/BinIcon";
+import EditIcon from "../Icon/EditIcon";
 
 const CharacterCard = ({ character, actionAddFav, deleteCharacter }) => {
   const location = useLocation();
+  let navigate = useNavigate();
+
+  const navigateToForm = () => {
+    navigate(`/edit/${character.id}`);
+  };
+
   return (
     <>
       <CharacterCardStyled>
@@ -32,6 +40,12 @@ const CharacterCard = ({ character, actionAddFav, deleteCharacter }) => {
                     }}
                   >
                     <FavIcon className="favIcon"></FavIcon>
+                  </i>
+                )}
+
+                {character.created === true && (
+                  <i className="favIcon star" onClick={navigateToForm}>
+                    <EditIcon className="favIcon"></EditIcon>
                   </i>
                 )}
 

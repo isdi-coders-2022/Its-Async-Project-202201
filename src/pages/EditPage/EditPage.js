@@ -3,8 +3,9 @@ import { useNavigate } from "react-router-dom";
 import Form from "../../components/Form/Form";
 import useCharacters from "../../hooks/useCharacters";
 
-const CreatePage = () => {
-  const { addCharactersAPI } = useCharacters();
+const EditPage = () => {
+  const { editCharacterAPI } = useCharacters();
+
   let navigate = useNavigate();
 
   const blankFields = {
@@ -21,7 +22,7 @@ const CreatePage = () => {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    addCharactersAPI(formData);
+    editCharacterAPI(formData);
     resetForm();
     setTimeout(() => {
       navigate(`/favorites`);
@@ -39,7 +40,7 @@ const CreatePage = () => {
   return (
     <>
       <Form
-        buttonText="Create"
+        buttonText="Edit"
         actionOnSubmit={onFormSubmit}
         changeData={changeData}
         formData={formData}
@@ -48,4 +49,4 @@ const CreatePage = () => {
   );
 };
 
-export default CreatePage;
+export default EditPage;
