@@ -9,14 +9,14 @@ describe("Given a characterReducer function", () => {
         {
           id: 1,
           name: "Rick Sanchez",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
         {
           id: 2,
           name: "Morty Smith",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
@@ -28,14 +28,14 @@ describe("Given a characterReducer function", () => {
           {
             id: 1,
             name: "Rick Sanchez",
-            Status: "Alive",
+            status: "Alive",
             species: "Human",
             gender: "Male",
           },
           {
             id: 2,
             name: "Morty Smith",
-            Status: "Alive",
+            status: "Alive",
             species: "Human",
             gender: "Male",
           },
@@ -52,14 +52,14 @@ describe("Given a characterReducer function", () => {
         {
           id: 1,
           name: "Rick Sanchez",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
         {
           id: 2,
           name: "Morty Smith",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
@@ -69,21 +69,21 @@ describe("Given a characterReducer function", () => {
         {
           id: 1,
           name: "Rick Sanchez",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
         {
           id: 2,
           name: "Morty Smith",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
         {
           id: 3,
           name: "Matheus",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
@@ -94,7 +94,7 @@ describe("Given a characterReducer function", () => {
         characters: {
           id: 3,
           name: "Matheus",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
@@ -110,7 +110,7 @@ describe("Given a characterReducer function", () => {
         {
           id: 1,
           name: "Rick Sanchez",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
@@ -127,7 +127,7 @@ describe("Given a characterReducer function", () => {
         {
           id: 1,
           name: "Rick Sanchez",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
@@ -148,14 +148,14 @@ describe("Given a characterReducer function", () => {
         {
           id: 1,
           name: "Rick Sanchez",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
         {
           id: 2,
           name: "Morty Smith",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
@@ -164,14 +164,14 @@ describe("Given a characterReducer function", () => {
         {
           id: 1,
           name: "Rick Sanchez",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
         {
           id: 2,
           name: "Morty Smith",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
@@ -191,14 +191,14 @@ describe("Given a characterReducer function", () => {
         {
           id: 1,
           name: "Rick Sanchez",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
         {
           id: 2,
           name: "Morty Smith",
-          Status: "Alive",
+          status: "Alive",
           species: "Alien",
           gender: "Male",
         },
@@ -207,7 +207,7 @@ describe("Given a characterReducer function", () => {
         {
           id: 1,
           name: "Rick Sanchez",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
@@ -218,14 +218,14 @@ describe("Given a characterReducer function", () => {
           {
             id: 1,
             name: "Rick Sanchez",
-            Status: "Alive",
+            status: "Alive",
             species: "Human",
             gender: "Male",
           },
           {
             id: 2,
             name: "Morty Smith",
-            Status: "Alive",
+            status: "Alive",
             species: "Alien",
             gender: "Male",
           },
@@ -242,14 +242,14 @@ describe("Given a characterReducer function", () => {
         {
           id: 1,
           name: "Rick Sanchez",
-          Status: "Alive",
+          status: "Alive",
           species: "Human",
           gender: "Male",
         },
         {
           id: 2,
           name: "Morty Smith",
-          Status: "Alive",
+          status: "Alive",
           species: "Alien",
           gender: "Male",
         },
@@ -258,7 +258,7 @@ describe("Given a characterReducer function", () => {
         {
           id: 2,
           name: "Morty Smith",
-          Status: "Alive",
+          status: "Alive",
           species: "Alien",
           gender: "Male",
         },
@@ -269,14 +269,65 @@ describe("Given a characterReducer function", () => {
           {
             id: 1,
             name: "Rick Sanchez",
-            Status: "Alive",
+            status: "Alive",
             species: "Human",
             gender: "Male",
           },
           {
             id: 2,
             name: "Morty Smith",
-            Status: "Alive",
+            status: "Alive",
+            species: "Alien",
+            gender: "Male",
+          },
+        ],
+      };
+      const filteredCharacters = characterReducer(currentCharacters, action);
+      expect(filteredCharacters).toEqual(expectedCharacter);
+    });
+  });
+
+  describe("When it receives characters and the action 'filter-alive'", () => {
+    test("Then it should return the alive characters", () => {
+      const currentCharacters = [
+        {
+          id: 1,
+          name: "Rick Sanchez",
+          status: "Dead",
+          species: "Human",
+          gender: "Male",
+        },
+        {
+          id: 2,
+          name: "Morty Smith",
+          status: "Alive",
+          species: "Alien",
+          gender: "Male",
+        },
+      ];
+      const expectedCharacter = [
+        {
+          id: 2,
+          name: "Morty Smith",
+          status: "Alive",
+          species: "Alien",
+          gender: "Male",
+        },
+      ];
+      const action = {
+        type: "filter-alive",
+        characters: [
+          {
+            id: 1,
+            name: "Rick Sanchez",
+            status: "Dead",
+            species: "Human",
+            gender: "Male",
+          },
+          {
+            id: 2,
+            name: "Morty Smith",
+            status: "Alive",
             species: "Alien",
             gender: "Male",
           },
