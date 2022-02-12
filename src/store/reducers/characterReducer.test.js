@@ -181,4 +181,54 @@ describe("Given a characterReducer function", () => {
       expect(favoriteCharacter).toEqual(expectedCharacter);
     });
   });
+  describe("When it receives characters and the action 'loadFilteredHumansAPI'", () => {
+    test("Then it should return the human characters", () => {
+      const currentCharacters = [
+        {
+          id: 1,
+          name: "Rick Sanchez",
+          Status: "Alive",
+          species: "Human",
+          gender: "Male",
+        },
+        {
+          id: 2,
+          name: "Morty Smith",
+          Status: "Alive",
+          species: "Alien",
+          gender: "Male",
+        },
+      ];
+      const expectedCharacter = [
+        {
+          id: 1,
+          name: "Rick Sanchez",
+          Status: "Alive",
+          species: "Human",
+          gender: "Male",
+        },
+      ];
+      const action = {
+        type: "filter-humans",
+        characters: [
+          {
+            id: 1,
+            name: "Rick Sanchez",
+            Status: "Alive",
+            species: "Human",
+            gender: "Male",
+          },
+          {
+            id: 2,
+            name: "Morty Smith",
+            Status: "Alive",
+            species: "Alien",
+            gender: "Male",
+          },
+        ],
+      };
+      const filteredCharacters = characterReducer(currentCharacters, action);
+      expect(filteredCharacters).toEqual(expectedCharacter);
+    });
+  });
 });
