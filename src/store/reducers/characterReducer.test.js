@@ -102,4 +102,41 @@ describe("Given a characterReducer function", () => {
       expect(allCharacters).toEqual(expectedCharacters);
     });
   });
+  describe("When it receives an id and the action 'deleteCharacter'", () => {
+    test("Then it should return all the characters minus the one with the corresponding id", () => {
+      const currentCharacters = [
+        {
+          id: 1,
+          name: "Rick Sanchez",
+          Status: "Alive",
+          species: "Human",
+          gender: "Male",
+        },
+        {
+          id: 2,
+          name: "Morty Smith",
+          Status: "Alive",
+          species: "Human",
+          gender: "Male",
+        },
+      ];
+
+      const expectedCharacters = [
+        {
+          id: 1,
+          name: "Rick Sanchez",
+          Status: "Alive",
+          species: "Human",
+          gender: "Male",
+        },
+      ];
+
+      const action = {
+        type: "delete-character",
+        id: 2,
+      };
+      const allCharacters = characterReducer(currentCharacters, action);
+      expect(allCharacters).toEqual(expectedCharacters);
+    });
+  });
 });
