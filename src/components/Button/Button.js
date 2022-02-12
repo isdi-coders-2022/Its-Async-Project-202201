@@ -9,6 +9,9 @@ const StyledButton = styled.button`
   width: 120px;
   border-style: none;
   font-family: "Roboto";
+  :focus {
+    outline: none;
+  }
 `;
 
 const Button = ({ text, actionOnClick }) => {

@@ -10,6 +10,11 @@ export const filterHumans = (characters) => ({
   characters,
 });
 
+export const filterAliens = (characters) => ({
+  type: actionsTypes.filterAliens,
+  characters,
+});
+
 export const nextPage = (pageNumber) => ({
   type: actionsTypes.nextPage,
   pageNumber,

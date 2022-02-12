@@ -1,6 +1,6 @@
 import StyledFilters from "../../styles/Filter.styled";
 
-const Filter = ({ text, actionOnClick }) => {
+const Filter = ({ text, actionFilterHumans, actionFilterAliens }) => {
   return (
     <>
       <StyledFilters>
@@ -9,12 +9,16 @@ const Filter = ({ text, actionOnClick }) => {
           <button
             className="filterButton"
             type="button"
-            onClick={actionOnClick}
+            onClick={actionFilterHumans}
           >
             Humans
           </button>
-          <button className="filterButton" type="button">
-            Status
+          <button
+            className="filterButton"
+            type="button"
+            onClick={actionFilterAliens}
+          >
+            Aliens
           </button>
           <button className="filterButton" type="button">
             Species

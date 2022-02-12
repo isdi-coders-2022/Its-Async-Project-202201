@@ -3,6 +3,8 @@ const actionsTypes = {
 
   filterHumans: "filter-humans",
 
+  filterAliens: "filter-aliens",
+
   nextPage: "next-page",
 
   addCharacter: "add-character",

@@ -9,12 +9,22 @@ const characterReducer = (currentCharacters, action) => {
       break;
 
     case actionsTypes.filterHumans:
-      const newfilteredCharacters = [...action.characters];
+      const newfilteredCharacters = [...currentCharacters, action.characters];
       const filteredHumans = newfilteredCharacters.filter(
-        (character) =>
-          character.species === "Human" && character.status === "Alive"
+        (character) => character.species === "Human"
       );
       newCharacters = filteredHumans;
+      break;
+
+    case actionsTypes.filterAliens:
+      const newfilteredAlienCharacters = [
+        ...currentCharacters,
+        action.characters,
+      ];
+      const filteredAliens = newfilteredAlienCharacters.filter(
+        (character) => character.species === "Alien"
+      );
+      newCharacters = filteredAliens;
       break;
 
     case actionsTypes.addCharacter:
