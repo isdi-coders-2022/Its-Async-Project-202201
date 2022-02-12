@@ -14,6 +14,7 @@ const Form = () => {
     gender: "",
     image: "",
     id: "",
+    created: true,
   };
 
   const [formData, setFormData] = useState(blankFields);
@@ -23,7 +24,7 @@ const Form = () => {
     addCharactersAPI(formData);
     resetForm();
     setTimeout(() => {
-      navigate(`/favorites/`);
+      navigate(`/favorites`);
     }, 1800);
   };
 
