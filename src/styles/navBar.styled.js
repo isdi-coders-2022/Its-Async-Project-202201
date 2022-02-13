@@ -36,7 +36,7 @@ const NavBarStyled = styled.div`
     background-clip: border-box;
     background-image: inherit;
     height: 200px;
-    background-image: url("images/portalBackground.jpg");
+    background-image: url("https://itsasync.netlify.app/images/portalBackground.jpg");
   }
 
   .navBar {
