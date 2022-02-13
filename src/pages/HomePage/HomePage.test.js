@@ -46,7 +46,7 @@ describe("Given a HomePage", () => {
 
       expect(items).toHaveLength(1);
     });
-    test("then it should render a list", () => {
+    test("then it should render 20 characters", async () => {
       render(
         <BrowserRouter>
           <CharacterContextProvider>
@@ -55,9 +55,9 @@ describe("Given a HomePage", () => {
         </BrowserRouter>
       );
 
-      const list = screen.queryByRole("list");
+      const items = await screen.findAllByRole("img");
 
-      expect(list).not.toBeNull();
+      expect(items).toHaveLength(20);
     });
     test("then it should render Rick Sanchez", async () => {
       const { findByText } = render(
