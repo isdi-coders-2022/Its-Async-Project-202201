@@ -98,7 +98,6 @@ const useCharacters = () => {
     dispatch(addCharacter(newCharacter));
   };
 
-
   const addCharactersFavAPI = async (character) => {
     const response = await fetch(
       "https://rick-and-morty-isdi.herokuapp.com/characters/",
@@ -113,7 +112,7 @@ const useCharacters = () => {
     const newCharacter = await response.json();
     dispatch(favCharacter(newCharacter));
   };
-  
+
   const editCharacterAPI = async (id) => {
     const response = await fetch(
       `${apiLocalUrl}/${location.pathname.slice(5)}`,
