@@ -3,7 +3,6 @@ import "@fontsource/roboto";
 
 const StyledFooter = styled.footer`
   background-color: #f0eb74;
-  height: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
