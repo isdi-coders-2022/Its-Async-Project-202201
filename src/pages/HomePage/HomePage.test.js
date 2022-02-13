@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import CharacterCard from "../../components/CharacterCard/CharacterCard";
 import CharacterContextProvider from "../../store/contexts/CharacterContextProvider";
 import HomePage from "./HomePage";
 
@@ -70,6 +71,27 @@ describe("Given a HomePage", () => {
 
       // eslint-disable-next-line testing-library/prefer-screen-queries
       expect(await findByText("Rick Sanchez")).toBeInTheDocument();
+    });
+  });
+});
+
+describe("Given a HomePage Component", () => {
+  describe("When it renders the characters cards", () => {
+    test("Then it should have a more info text", () => {
+      const mockFunction = jest.fn();
+      render(
+        <BrowserRouter>
+          <CharacterContextProvider>
+            <CharacterCard
+              character={""}
+              actionAddFav={mockFunction}
+              deleteCharacter={() => ""}
+            />
+          </CharacterContextProvider>
+        </BrowserRouter>
+      );
+      const moreInfoText = screen.getByRole("link", { name: "More Info" });
+      expect(moreInfoText).toBeInTheDocument();
     });
   });
 });
