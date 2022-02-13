@@ -91,7 +91,7 @@ describe("Given a characterReducer function", () => {
 
       const action = {
         type: "add-character",
-        characters: {
+        character: {
           id: 3,
           name: "Matheus",
           status: "Alive",
@@ -100,6 +100,7 @@ describe("Given a characterReducer function", () => {
         },
       };
       const allCharacters = characterReducer(currentCharacters, action);
+
       expect(allCharacters).toEqual(expectedCharacters);
     });
   });

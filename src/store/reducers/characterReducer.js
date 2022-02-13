@@ -39,11 +39,11 @@ const characterReducer = (currentCharacters, action) => {
       break;
 
     case actionsTypes.addCharacter:
-      newCharacters = [...currentCharacters, action.characters];
+      newCharacters = [...currentCharacters, action.character];
       break;
 
     case actionsTypes.editCharacter:
-      newCharacters = [...currentCharacters, action.characters];
+      newCharacters = [...currentCharacters, action.character];
       break;
 
     case actionsTypes.deleteCharacter:
