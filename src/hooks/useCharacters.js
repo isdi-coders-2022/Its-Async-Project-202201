@@ -7,6 +7,7 @@ import {
   filterHumans,
   filterAliens,
   filterAlive,
+  favCharacter,
   editCharacter,
 } from "../store/actions/characters/actionsCreators";
 import CharacterContext from "../store/contexts/CharacterContext";
@@ -97,6 +98,22 @@ const useCharacters = () => {
     dispatch(addCharacter(newCharacter));
   };
 
+
+  const addCharactersFavAPI = async (character) => {
+    const response = await fetch(
+      "https://rick-and-morty-isdi.herokuapp.com/characters/",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(character),
+      }
+    );
+    const newCharacter = await response.json();
+    dispatch(favCharacter(newCharacter));
+  };
+  
   const editCharacterAPI = async (id) => {
     const response = await fetch(
       `${apiLocalUrl}/${location.pathname.slice(5)}`,
@@ -136,6 +153,7 @@ const useCharacters = () => {
     addCharactersAPI,
     editCharacterAPI,
     deleteCharacterAPI,
+    addCharactersFavAPI,
   };
 };
 

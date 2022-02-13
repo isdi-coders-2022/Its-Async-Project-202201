@@ -14,6 +14,8 @@ const actionsTypes = {
   editCharacter: "edit-character",
 
   deleteCharacter: "delete-character",
+
+  favCharacter: "fav-character",
 };
 
 export default actionsTypes;
