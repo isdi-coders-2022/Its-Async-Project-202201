@@ -34,6 +34,7 @@ const CharacterCard = ({ character, actionAddFav, deleteCharacter }) => {
                 <Link to={`/character/${character.id}`}>More Info</Link>
                 {location.pathname === "/home" && (
                   <i
+                    title="FAV"
                     className="favIcon star"
                     onClick={() => {
                       actionAddFav(character);

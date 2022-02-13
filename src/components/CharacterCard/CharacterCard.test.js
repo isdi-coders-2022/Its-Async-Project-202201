@@ -1,6 +1,9 @@
 import CharacterCard from "./CharacterCard";
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import userEvent from "@testing-library/react";
+import HomePage from "../../pages/HomePage/HomePage";
+import CharacterContextProvider from "../../store/contexts/CharacterContextProvider";
 
 describe("Given a CharacterCard Component", () => {
   describe("When it receives a character", () => {
@@ -18,6 +21,26 @@ describe("Given a CharacterCard Component", () => {
         </BrowserRouter>
       );
       const expectedText = screen.queryByText(character1.name);
+      expect(expectedText).toBeInTheDocument();
+    });
+  });
+
+  describe("When it recives a character", () => {
+    test("Then it should render a img", () => {
+      const character1 = {
+        name: "Morty",
+        gender: "Male",
+        species: "Human",
+        status: "Alive",
+        url: "imgURL",
+      };
+      render(
+        <BrowserRouter>
+          <CharacterCard character={character1} />
+        </BrowserRouter>
+      );
+
+      const expectedText = screen.getByRole("img");
       expect(expectedText).toBeInTheDocument();
     });
   });
