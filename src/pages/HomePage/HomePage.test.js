@@ -47,7 +47,7 @@ describe("Given a HomePage", () => {
 
       expect(items).toHaveLength(1);
     });
-    test("then it should render 20 characters", async () => {
+    test.only("then it should render 20 characters", async () => {
       render(
         <BrowserRouter>
           <CharacterContextProvider>
