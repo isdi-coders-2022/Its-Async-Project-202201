@@ -9,7 +9,7 @@ const characterReducer = (currentCharacters, action) => {
       break;
 
     case actionsTypes.filterHumans:
-      const newfilteredCharacters = [...currentCharacters, action.characters];
+      const newfilteredCharacters = [...action.characters];
       const filteredHumans = newfilteredCharacters.filter(
         (character) => character.species === "Human"
       );
@@ -54,12 +54,6 @@ const characterReducer = (currentCharacters, action) => {
 
     case actionsTypes.favCharacter:
       newCharacters = currentCharacters.map((character) => {
-        if (character.id === action.id) {
-          return {
-            ...character,
-            favorite: !character.favorite,
-          };
-        }
         return { ...character };
       });
       break;
