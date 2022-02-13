@@ -7,27 +7,27 @@ const Footer = () => {
         <div className="image-container d-flex justify-content-center text-center mt-3 mb-2">
           <img
             className="col-2"
-            src="images/jerry.png"
+            src="https://itsasync.netlify.app/images/jerry.png"
             alt="Jerry logo from Rick and Morty"
           />
           <img
             className="col-2"
-            src="images/rick.png"
+            src="https://itsasync.netlify.app/images/rick.png"
             alt="Rick logo from Rick and Morty"
           />
           <img
             className="col-2"
-            src="images/morty.png"
+            src="https://itsasync.netlify.app/images/morty.png"
             alt="Morty logo from Rick and Morty"
           />
           <img
             className="col-2"
-            src="images/summer.png"
+            src="https://itsasync.netlify.app/images/summer.png"
             alt="Summer logo from Rick and Morty"
           />
           <img
             className="col-2"
-            src="images/beth.png"
+            src="https://itsasync.netlify.app/images/beth.png"
             alt="Beth logo from Rick and Morty"
           />
         </div>
