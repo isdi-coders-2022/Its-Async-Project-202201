@@ -1,5 +1,6 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import userEvent from "@testing-library/user-event";
 import CharacterCard from "../../components/CharacterCard/CharacterCard";
 import CharacterContextProvider from "../../store/contexts/CharacterContextProvider";
 import HomePage from "./HomePage";

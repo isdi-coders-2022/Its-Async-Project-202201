@@ -22,3 +22,18 @@ describe("Given a button Component", () => {
     });
   });
 });
+
+describe("Given a Button Component", () => {
+  describe("When the button receives an actionOnClick", () => {
+    test.only("Then it should call the action", () => {
+      const action = jest.fn();
+
+      render(<Button text={"Next"} actionOnClick={action} />);
+
+      const foundButton = screen.getByRole("button");
+      userEvent.click(foundButton);
+
+      expect(action).toHaveBeenCalled();
+    });
+  });
+});

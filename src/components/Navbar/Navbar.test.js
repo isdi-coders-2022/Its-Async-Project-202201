@@ -1,6 +1,8 @@
 import Navbar from "./Navbar";
 import { render, screen } from "@testing-library/react";
-import { BrowserRouter as Router } from "react-router-dom";
+import userEvent from "@testing-library/user-event";
+import { BrowserRouter, BrowserRouter as Router } from "react-router-dom";
+import CharacterContextProvider from "../../store/contexts/CharacterContextProvider";
 
 describe("Given a Navbar component", () => {
   describe("When it is invoked", () => {
