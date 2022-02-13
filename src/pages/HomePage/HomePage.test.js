@@ -59,5 +59,17 @@ describe("Given a HomePage", () => {
 
       expect(items).toHaveLength(20);
     });
+    test("then it should render Rick Sanchez", async () => {
+      const { findByText } = render(
+        <BrowserRouter>
+          <CharacterContextProvider>
+            <HomePage />
+          </CharacterContextProvider>
+        </BrowserRouter>
+      );
+
+      // eslint-disable-next-line testing-library/prefer-screen-queries
+      expect(await findByText("Rick Sanchez")).toBeInTheDocument();
+    });
   });
 });
