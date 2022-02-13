@@ -20,5 +20,16 @@ describe("Given a CharacterPage", () => {
 
       expect(expectedElement).toBeInTheDocument();
     });
+    test("then it should render 1 characters", async () => {
+      render(
+        <BrowserRouter>
+          <CharacterContextProvider>
+            <CharacterPage />
+          </CharacterContextProvider>
+        </BrowserRouter>
+      );
+      const itemsImg = await screen.findAllByRole("list");
+      expect(itemsImg).toHaveLength(1);
+    });
   });
 });
