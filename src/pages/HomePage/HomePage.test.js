@@ -46,5 +46,18 @@ describe("Given a HomePage", () => {
 
       expect(items).toHaveLength(1);
     });
+    test("then it should render 20 characters", async () => {
+      render(
+        <BrowserRouter>
+          <CharacterContextProvider>
+            <HomePage />
+          </CharacterContextProvider>
+        </BrowserRouter>
+      );
+
+      const items = await screen.findAllByRole("img");
+
+      expect(items).toHaveLength(20);
+    });
   });
 });
