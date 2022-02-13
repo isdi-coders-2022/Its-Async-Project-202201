@@ -1,3 +1,4 @@
+
 import { render, screen } from "@testing-library/react";
 import CharacterDetailCard from "./CharacterDetailCard";
 
@@ -55,6 +56,7 @@ describe("Given a CharacterDetailCard", () => {
         gender: "Male",
         species: "Human",
         status: "Alive",
+
         url: "imgURL",
         origin: { name: "Earth" },
         location: { name: "Venus" },
@@ -62,6 +64,7 @@ describe("Given a CharacterDetailCard", () => {
       render(<CharacterDetailCard character={character1} />);
 
       const expectedText = screen.queryByText(character1.location.name);
+
       expect(expectedText).toBeInTheDocument();
     });
   });

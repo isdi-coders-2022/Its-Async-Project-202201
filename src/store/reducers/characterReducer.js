@@ -39,11 +39,11 @@ const characterReducer = (currentCharacters, action) => {
       break;
 
     case actionsTypes.addCharacter:
-      newCharacters = [...currentCharacters, action.characters];
+      newCharacters = [...currentCharacters, action.character];
       break;
 
     case actionsTypes.editCharacter:
-      newCharacters = [...currentCharacters, action.characters];
+      newCharacters = [...currentCharacters, action.character];
       break;
 
     case actionsTypes.deleteCharacter:
@@ -54,12 +54,6 @@ const characterReducer = (currentCharacters, action) => {
 
     case actionsTypes.favCharacter:
       newCharacters = currentCharacters.map((character) => {
-        if (character.id === action.id) {
-          return {
-            ...character,
-            favorite: !character.favorite,
-          };
-        }
         return { ...character };
       });
       break;
