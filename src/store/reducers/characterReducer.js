@@ -9,7 +9,7 @@ const characterReducer = (currentCharacters, action) => {
       break;
 
     case actionsTypes.filterHumans:
-      const newfilteredCharacters = [...action.characters];
+      const newfilteredCharacters = [...currentCharacters, action.characters];
       const filteredHumans = newfilteredCharacters.filter(
         (character) => character.species === "Human"
       );
