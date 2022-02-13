@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import CharacterContextProvider from "../../store/contexts/CharacterContextProvider";
 import HomePage from "./HomePage";
 
+jest.setTimeout(90000);
 describe("Given a HomePage", () => {
   describe("When its instancied", () => {
     test("then it should render a heading ALL CHARACTERS", () => {
@@ -46,7 +47,7 @@ describe("Given a HomePage", () => {
 
       expect(items).toHaveLength(1);
     });
-    test("then it should render a list", () => {
+    test.only("then it should render 20 characters", async () => {
       render(
         <BrowserRouter>
           <CharacterContextProvider>
@@ -55,9 +56,9 @@ describe("Given a HomePage", () => {
         </BrowserRouter>
       );
 
-      const list = screen.queryByRole("list");
+      const items = await screen.findAllByRole("img");
 
-      expect(list).not.toBeNull();
+      expect(items).toHaveLength(20);
     });
   });
 });
