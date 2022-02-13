@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import CharacterContextProvider from "../../store/contexts/CharacterContextProvider";
 import FavoritePage from "./FavoritesPage";
 
-describe("Given a FavorutePage", () => {
+describe("Given a FavoritePage", () => {
   describe("When its rendered", () => {
     test("Then it should render a headline 'MY CHARACTERS'", () => {
       render(
@@ -33,6 +33,18 @@ describe("Given a FavorutePage", () => {
       const expectedButtons = screen.getAllByRole("button");
 
       expect(expectedButtons).toHaveLength(3);
+    });
+    test("then it should render 2 images", async () => {
+      render(
+        <BrowserRouter>
+          <CharacterContextProvider>
+            <FavoritePage />
+          </CharacterContextProvider>
+        </BrowserRouter>
+      );
+      const items = await screen.findAllByRole("img");
+
+      expect(items).toHaveLength(2);
     });
   });
 });
