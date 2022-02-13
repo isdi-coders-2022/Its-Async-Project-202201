@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import CharacterContextProvider from "../../store/contexts/CharacterContextProvider";
 import HomePage from "./HomePage";
 
+jest.setTimeout(10000);
 describe("Given a HomePage", () => {
   describe("When its instancied", () => {
     test("then it should render a heading ALL CHARACTERS", () => {
