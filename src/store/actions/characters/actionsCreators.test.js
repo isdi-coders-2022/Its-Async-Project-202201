@@ -1,9 +1,11 @@
-
 import {
   loadCharacters,
   addCharacter,
   nextPage,
   deleteCharacter,
+  filterHumans,
+  filterAliens,
+  filterAlive,
 } from "./actionsCreators";
 
 describe("Given a loadCharacters action", () => {
@@ -62,6 +64,68 @@ describe("Given an deleteCharacter action", () => {
         id,
       };
       const action = deleteCharacter(id);
+      expect(action).toEqual(expectedAction);
+    });
+  });
+});
+
+describe("Given an filterHumans action", () => {
+  describe("When it receives a character", () => {
+    test("Then it should return an action type filterHumans", () => {
+      const characters = {
+        name: "Rick Sanchez",
+        status: "Alive",
+        species: "Human",
+        gender: "Male",
+        id: 40,
+      };
+
+      const expectedAction = {
+        type: "filter-humans",
+        characters,
+      };
+
+      const action = filterHumans(characters);
+      expect(action).toEqual(expectedAction);
+    });
+  });
+});
+
+describe("Given an filterAliens action", () => {
+  describe("When it receives a character", () => {
+    test("Then it should return an action type filterAliens", () => {
+      const characters = {
+        name: "Rick Sanchez",
+        status: "Alive",
+        species: "Alien",
+        gender: "Male",
+        id: 46,
+      };
+
+      const expectedAction = {
+        type: "filter-aliens",
+        characters,
+      };
+
+      const action = filterAliens(characters);
+      expect(action).toEqual(expectedAction);
+    });
+
+    test("Then it should return an action type filterAlive", () => {
+      const characters = {
+        name: "Rick Sanchez",
+        status: "Alive",
+        species: "Alien",
+        gender: "Male",
+        id: 26,
+      };
+
+      const expectedAction = {
+        type: "filter-alive",
+        characters,
+      };
+
+      const action = filterAlive(characters);
       expect(action).toEqual(expectedAction);
     });
   });

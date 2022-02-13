@@ -1,6 +1,5 @@
 import CharacterCardStyled from "../../styles/CharacterCard.styled";
-import { Link, useLocation } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import FavIcon from "../Icon/FavIcon";
 import BinIcon from "../Icon/BinIcon";
 import EditIcon from "../Icon/EditIcon";
@@ -34,6 +33,7 @@ const CharacterCard = ({ character, actionAddFav, deleteCharacter }) => {
                 <Link to={`/character/${character.id}`}>More Info</Link>
                 {location.pathname === "/home" && (
                   <i
+                    title="FAV"
                     className="favIcon star"
                     onClick={() => {
                       actionAddFav(character);

@@ -20,5 +20,44 @@ describe("Given a CharacterCard Component", () => {
       const expectedText = screen.queryByText(character1.name);
       expect(expectedText).toBeInTheDocument();
     });
+    describe("When it recives a character", () => {
+      test("Then it should render a img", () => {
+        const character1 = {
+          name: "Morty",
+          gender: "Male",
+          species: "Human",
+          status: "Alive",
+          url: "imgURL",
+        };
+        render(
+          <BrowserRouter>
+            <CharacterCard character={character1} />
+          </BrowserRouter>
+        );
+
+        const expectedText = screen.getByRole("img");
+        expect(expectedText).toBeInTheDocument();
+      });
+    });
+  });
+
+  describe("When it recives a character", () => {
+    test("Then it should render a img", () => {
+      const character1 = {
+        name: "Morty",
+        gender: "Male",
+        species: "Human",
+        status: "Alive",
+        url: "imgURL",
+      };
+      render(
+        <BrowserRouter>
+          <CharacterCard character={character1} />
+        </BrowserRouter>
+      );
+
+      const expectedText = screen.getByRole("img");
+      expect(expectedText).toBeInTheDocument();
+    });
   });
 });
