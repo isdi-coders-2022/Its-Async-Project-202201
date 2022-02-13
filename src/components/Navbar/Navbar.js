@@ -8,7 +8,12 @@ const Navbar = () => {
         <nav>
           <div className="navBar">
             <div className="navHome">
-              <img className="icon" src="images\rick.png" alt="" width="40px" />
+              <img
+                className="icon"
+                src="https://itsasync.netlify.app/images/rick.png"
+                alt=""
+                width="40px"
+              />
               <a className="navbar-brand" href="/home">
                 Rick & Morty App
               </a>
@@ -23,10 +28,12 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-
           </div>
           <section className="navImg">
-            <img src="images\title.png" alt="" />
+            <img
+              src="https://itsasync.netlify.app/images/title.png"
+              alt="Rick and Morty"
+            />
           </section>
         </nav>
       </NavBarStyled>
