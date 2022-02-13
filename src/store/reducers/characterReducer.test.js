@@ -100,7 +100,7 @@ describe("Given a characterReducer function", () => {
         },
       };
       const allCharacters = characterReducer(currentCharacters, action);
-      console.log(allCharacters);
+
       expect(allCharacters).toEqual(expectedCharacters);
     });
   });
