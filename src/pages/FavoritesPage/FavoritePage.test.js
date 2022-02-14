@@ -21,7 +21,7 @@ describe("Given a FavorutePage", () => {
       expect(expectedElement).toBeInTheDocument();
     });
 
-    test("Then it should render 3 buttons", () => {
+    test("Then it should render 4 buttons", () => {
       render(
         <BrowserRouter>
           <CharacterContextProvider>
@@ -32,7 +32,7 @@ describe("Given a FavorutePage", () => {
 
       const expectedButtons = screen.getAllByRole("button");
 
-      expect(expectedButtons).toHaveLength(3);
+      expect(expectedButtons).toHaveLength(4);
     });
   });
 });

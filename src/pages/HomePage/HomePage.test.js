@@ -33,7 +33,7 @@ describe("Given a HomePage", () => {
 
       const items = screen.getAllByRole("button");
 
-      expect(items).toHaveLength(5);
+      expect(items).toHaveLength(6);
     });
     test("then it should render one list items", () => {
       render(
