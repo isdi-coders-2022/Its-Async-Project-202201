@@ -16,10 +16,19 @@ const StyledFilters = styled.nav`
     border-style: none;
     margin-right: 80px;
     font-family: "Roboto";
+    margin-top: 20px;
 
     &:hover {
       background-color: #55cc44;
     }
+  }
+
+  .resetButton {
+    width: 520px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 80px;
+    justify-content: center;
   }
 
   h2 {

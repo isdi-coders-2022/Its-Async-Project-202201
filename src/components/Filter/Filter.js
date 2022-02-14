@@ -5,12 +5,21 @@ const Filter = ({
   actionFilterHumans,
   actionFilterAliens,
   actionFilterAlive,
+  actionResetFilter,
 }) => {
   return (
     <>
       <StyledFilters>
         <h2 className="title">{text}</h2>
         <div className="filterMenu">
+          <button
+            className="filterButton resetButton"
+            type="button"
+            onClick={actionResetFilter}
+          >
+            Reset Filter
+          </button>
+          <div className="filtersButton"></div>
           <button
             className="filterButton"
             type="button"

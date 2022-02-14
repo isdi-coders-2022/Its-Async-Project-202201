@@ -52,6 +52,7 @@ const HomePage = () => {
         actionFilterHumans={filterHumans}
         actionFilterAliens={filterAliens}
         actionFilterAlive={filterAlive}
+        actionResetFilter={loadCharactersAPI}
       ></Filter>
       <CardListStyled>
         <section className="container">
