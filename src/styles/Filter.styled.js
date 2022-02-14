@@ -49,17 +49,30 @@ const StyledFilters = styled.nav`
     align-content: space-evenly;
 
     .title {
+      margin-top: 20px;
       margin-left: 0px;
     }
 
     .filterMenu {
+      margin-right: 0;
+    }
+
+    .resetButton {
+      width: 200px;
+      margin-top: 10px;
+      margin-right: 0;
+      margin-left: 80px;
+    }
+
+    .filtersButton {
       display: flex;
+      flex-direction: row;
       align-items: center;
       justify-content: space-between;
       margin: 0px;
     }
 
-    .filterMenu > .filterButton {
+    .filtersButton > .filterButton {
       width: 100px;
       height: 30px;
       margin-right: 10px;

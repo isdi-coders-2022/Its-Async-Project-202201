@@ -19,28 +19,29 @@ const Filter = ({
           >
             Reset Filter
           </button>
-          <div className="filtersButton"></div>
-          <button
-            className="filterButton"
-            type="button"
-            onClick={actionFilterHumans}
-          >
-            Humans
-          </button>
-          <button
-            className="filterButton"
-            type="button"
-            onClick={actionFilterAliens}
-          >
-            Aliens
-          </button>
-          <button
-            className="filterButton"
-            type="button"
-            onClick={actionFilterAlive}
-          >
-            Alive
-          </button>
+          <div className="filtersButton">
+            <button
+              className="filterButton"
+              type="button"
+              onClick={actionFilterHumans}
+            >
+              Humans
+            </button>
+            <button
+              className="filterButton"
+              type="button"
+              onClick={actionFilterAliens}
+            >
+              Aliens
+            </button>
+            <button
+              className="filterButton"
+              type="button"
+              onClick={actionFilterAlive}
+            >
+              Alive
+            </button>
+          </div>
         </div>
       </StyledFilters>
     </>
