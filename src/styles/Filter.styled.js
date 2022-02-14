@@ -16,10 +16,19 @@ const StyledFilters = styled.nav`
     border-style: none;
     margin-right: 80px;
     font-family: "Roboto";
+    margin-top: 20px;
 
     &:hover {
       background-color: #55cc44;
     }
+  }
+
+  .resetButton {
+    width: 520px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 80px;
+    justify-content: center;
   }
 
   h2 {
@@ -40,17 +49,30 @@ const StyledFilters = styled.nav`
     align-content: space-evenly;
 
     .title {
+      margin-top: 20px;
       margin-left: 0px;
     }
 
     .filterMenu {
+      margin-right: 0;
+    }
+
+    .resetButton {
+      width: 200px;
+      margin-top: 10px;
+      margin-right: 0;
+      margin-left: 80px;
+    }
+
+    .filtersButton {
       display: flex;
+      flex-direction: row;
       align-items: center;
       justify-content: space-between;
       margin: 0px;
     }
 
-    .filterMenu > .filterButton {
+    .filtersButton > .filterButton {
       width: 100px;
       height: 30px;
       margin-right: 10px;

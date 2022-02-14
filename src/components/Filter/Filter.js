@@ -5,6 +5,7 @@ const Filter = ({
   actionFilterHumans,
   actionFilterAliens,
   actionFilterAlive,
+  actionResetFilter,
 }) => {
   return (
     <>
@@ -12,26 +13,35 @@ const Filter = ({
         <h2 className="title">{text}</h2>
         <div className="filterMenu">
           <button
-            className="filterButton"
+            className="filterButton resetButton"
             type="button"
-            onClick={actionFilterHumans}
+            onClick={actionResetFilter}
           >
-            Humans
+            Reset Filter
           </button>
-          <button
-            className="filterButton"
-            type="button"
-            onClick={actionFilterAliens}
-          >
-            Aliens
-          </button>
-          <button
-            className="filterButton"
-            type="button"
-            onClick={actionFilterAlive}
-          >
-            Alive
-          </button>
+          <div className="filtersButton">
+            <button
+              className="filterButton"
+              type="button"
+              onClick={actionFilterHumans}
+            >
+              Humans
+            </button>
+            <button
+              className="filterButton"
+              type="button"
+              onClick={actionFilterAliens}
+            >
+              Aliens
+            </button>
+            <button
+              className="filterButton"
+              type="button"
+              onClick={actionFilterAlive}
+            >
+              Alive
+            </button>
+          </div>
         </div>
       </StyledFilters>
     </>
