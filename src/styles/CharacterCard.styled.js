@@ -6,10 +6,17 @@ const CharacterCardStyled = styled.div`
 
     &:hover {
       background-color: #55cc44;
+      right: 1%;
+      bottom: 1%;
+      box-shadow: rgba(0, 0, 0, 0.8) 1.95px 1.95px 2.6px;
 
       .favIcon {
-        color: #f0eb74;
         background-color: #24282f;
+        color: #4d4f56;
+
+        &:hover {
+          color: #f0eb74;
+        }
       }
     }
 
@@ -38,6 +45,11 @@ const CharacterCardStyled = styled.div`
   }
   .favIcon.star {
     padding: 6px;
+    &:hover {
+      right: 2%;
+      bottom: 2%;
+      box-shadow: rgba(0, 0, 0, 0.4) 1.95px 1.95px 2.6px;
+    }
   }
   .favIcon.bin {
     padding: 6px 11px;

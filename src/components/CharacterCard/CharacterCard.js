@@ -43,8 +43,8 @@ const CharacterCard = ({ character, actionAddFav, deleteCharacter }) => {
                   </i>
                 )}
 
-                {character.created === true && (
-                  <i className="favIcon star" onClick={navigateToForm}>
+                {location.pathname === "/favorites" && (
+                  <i className="favIcon bin" onClick={navigateToForm}>
                     <EditIcon className="favIcon"></EditIcon>
                   </i>
                 )}

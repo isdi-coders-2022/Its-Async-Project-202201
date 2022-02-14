@@ -19,14 +19,21 @@ const HomePage = () => {
     useContext(CharacterContext);
 
   const filterHumans = (characters) => {
+    loadCharactersAPI(pageNumber);
     loadFilteredHumansAPI(characters);
   };
 
+  const resetFilter = () => {
+    loadCharactersAPI(pageNumber);
+  };
+
   const filterAliens = (characters) => {
+    loadCharactersAPI(pageNumber);
     loadFilteredAliensAPI(characters);
   };
 
   const filterAlive = (characters) => {
+    loadCharactersAPI(pageNumber);
     loadFilteredAliveAPI(characters);
   };
 
@@ -52,6 +59,7 @@ const HomePage = () => {
         actionFilterHumans={filterHumans}
         actionFilterAliens={filterAliens}
         actionFilterAlive={filterAlive}
+        actionResetFilter={resetFilter}
       ></Filter>
       <CardListStyled>
         <section className="container">
