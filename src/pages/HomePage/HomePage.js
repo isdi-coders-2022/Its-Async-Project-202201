@@ -22,6 +22,10 @@ const HomePage = () => {
     loadFilteredHumansAPI(characters);
   };
 
+  const resetFilter = () => {
+    loadCharactersAPI(pageNumber);
+  };
+
   const filterAliens = (characters) => {
     loadFilteredAliensAPI(characters);
   };
@@ -52,7 +56,7 @@ const HomePage = () => {
         actionFilterHumans={filterHumans}
         actionFilterAliens={filterAliens}
         actionFilterAlive={filterAlive}
-        actionResetFilter={loadCharactersAPI}
+        actionResetFilter={resetFilter}
       ></Filter>
       <CardListStyled>
         <section className="container">
