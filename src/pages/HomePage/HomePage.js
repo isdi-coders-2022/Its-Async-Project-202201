@@ -19,17 +19,17 @@ const HomePage = () => {
     useContext(CharacterContext);
 
   const filterHumans = (characters) => {
-    loadCharactersAPI(characters);
+    loadCharactersAPI(pageNumber);
     loadFilteredHumansAPI(characters);
   };
 
   const filterAliens = (characters) => {
-    loadCharactersAPI(characters);
+    loadCharactersAPI(pageNumber);
     loadFilteredAliensAPI(characters);
   };
 
   const filterAlive = (characters) => {
-    loadCharactersAPI(characters);
+    loadCharactersAPI(pageNumber);
     loadFilteredAliveAPI(characters);
   };
 
