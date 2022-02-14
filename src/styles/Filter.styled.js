@@ -20,6 +20,9 @@ const StyledFilters = styled.nav`
 
     &:hover {
       background-color: #55cc44;
+      right: 5%;
+      bottom: 5%;
+      box-shadow: rgba(0, 0, 0, 0.8) 1.95px 1.95px 2.6px;
     }
   }
 
